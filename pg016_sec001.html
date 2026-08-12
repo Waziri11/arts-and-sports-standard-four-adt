@@ -21,8 +21,12 @@
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
-      <div class="container mx-auto max-w-5xl bg-white px-16 max-lg:px-10 max-sm:px-4 pt-8 pb-12 opacity-0" id="content">
-  <section data-section-type="activity_open_ended_answer" data-section-id="pg016_sec001" data-print-page="10" class="max-w-5xl mx-auto">
+      <div class="container mx-auto max-w-5xl bg-white px-16 max-lg:px-10 max-sm:px-4 pt-8 pb-12 opacity-0 pdf-fidelity-reader" id="content">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 16">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg016.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="activity_open_ended_answer" data-section-id="pg016_sec001" data-print-page="10" class="max-w-5xl mx-auto">
     <div class="mb-10 flex flex-col items-center">
       <img src="images/pg016_im001.jpg" alt="An actor practising speaking at a distance" data-id="pg016_im001" class="w-[430px] max-lg:w-[400px] max-sm:w-full max-w-full h-auto mb-3 rounded-sm" style="max-width: 100%; height: auto;">
       <div class="text-center text-[22px] max-sm:text-[18px] text-slate-800 leading-snug font-serif">
@@ -78,11 +82,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

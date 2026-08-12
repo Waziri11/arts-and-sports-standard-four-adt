@@ -22,8 +22,12 @@
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
       <h1 class="sr-only" id="page-heading">Arts and Sports Pupil's Book Standard Four</h1>
-      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0">
-  <section data-section-type="text_and_images" data-section-id="pg064_sec001" data-print-page="58" class="w-full flex justify-center bg-white">
+      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0 pdf-fidelity-reader">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 64">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg064.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_images" data-section-id="pg064_sec001" data-print-page="58" class="w-full flex justify-center bg-white">
     <div class="w-full max-w-5xl px-10 py-8 max-lg:px-8 max-lg:py-8 max-sm:px-4 max-sm:py-4">
       <div class="flex flex-col items-center">
         <img data-id="pg064_im001" alt="Pupils carrying a fellow pupil on a wooden stretcher" src="images/pg064_im001.jpg" class="block max-w-[430px] w-full h-auto object-contain max-sm:max-w-full" style="max-width: 100%; height: auto;">
@@ -45,11 +49,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

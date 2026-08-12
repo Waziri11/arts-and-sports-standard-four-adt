@@ -21,8 +21,12 @@
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
-      <div class="container content mx-auto max-w-5xl px-10 py-12 bg-white min-h-full max-sm:px-5 max-sm:py-8 opacity-0" id="content">
-  <section data-section-type="text_only" data-section-id="pg025_sec001" data-print-page="19" class="relative overflow-hidden text-left min-h-[1200px] max-sm:min-h-0">
+      <div class="container content mx-auto max-w-5xl px-10 py-12 bg-white min-h-full max-sm:px-5 max-sm:py-8 opacity-0 pdf-fidelity-reader" id="content">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 25">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg025.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_only" data-section-id="pg025_sec001" data-print-page="19" class="relative overflow-hidden text-left min-h-[1200px] max-sm:min-h-0">
     <div class="relative z-10 pt-10 pl-10 max-lg:pl-6 max-sm:pt-2 max-sm:pl-0">
       <h1 class="text-[30px] leading-none font-bold text-blue-700 max-sm:text-[26px]" data-id="pg025_n0002">Vocabulary</h1>
     </div>
@@ -58,11 +62,15 @@
       <p class="text-[88px] tracking-wide text-red-200/70 rotate-[-43deg] select-none whitespace-nowrap" data-id="pg025_n0018">FOR ONLINE READING ONLY</p>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

@@ -22,8 +22,12 @@
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
       <h1 class="sr-only" id="page-heading">Activity 1</h1>
-      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0">
-  <section data-section-type="text_and_single_image" data-section-id="pg050_sec001" data-print-page="44" class="flex justify-center px-6 py-6 max-sm:px-3 max-sm:py-4">
+      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0 pdf-fidelity-reader">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 50">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg050.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_single_image" data-section-id="pg050_sec001" data-print-page="44" class="flex justify-center px-6 py-6 max-sm:px-3 max-sm:py-4">
     <div class="relative w-full max-w-5xl overflow-hidden rounded-[2rem] bg-[#fbfbf8] px-10 py-8 shadow-sm max-lg:px-8 max-lg:py-7 max-sm:px-4 max-sm:py-4 max-sm:rounded-[1.5rem] max-sm:bg-white max-sm:shadow-none">
       <img alt="" role="presentation" aria-hidden="true" class="pointer-events-none absolute inset-0 z-0 h-full w-full object-contain opacity-[0.08] max-sm:opacity-[0.09]" src="images/pg050_im001.png" style="max-width: 100%; height: auto;">
 
@@ -76,11 +80,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

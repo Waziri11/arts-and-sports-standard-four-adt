@@ -22,8 +22,12 @@
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
       <h1 class="sr-only" id="page-heading">Arts and Sports Pupil's Book Standard Four</h1>
-      <div class="container content mx-auto max-w-5xl bg-white px-10 py-8 max-lg:px-8 max-sm:px-4 max-sm:py-6 opacity-0" id="content">
-  <section data-section-type="text_only" data-section-id="pg070_sec001" data-print-page="64" class="relative overflow-hidden text-gray-800 font-serif">
+      <div class="container content mx-auto max-w-5xl bg-white px-10 py-8 max-lg:px-8 max-sm:px-4 max-sm:py-6 opacity-0 pdf-fidelity-reader" id="content">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 70">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg070.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_only" data-section-id="pg070_sec001" data-print-page="64" class="relative overflow-hidden text-gray-800 font-serif">
     <div class="pointer-events-none absolute inset-0 flex items-center justify-center">
       <p class="-rotate-45 text-[72px] leading-none tracking-wide text-red-300/50 max-lg:text-[56px] max-sm:text-[34px]" data-id="pg070_n0051">FOR ONLINE READING ONLY</p>
     </div>
@@ -106,11 +110,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

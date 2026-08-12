@@ -21,8 +21,12 @@
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
-      <div class="container content mx-auto max-w-6xl p-0 bg-white opacity-0" id="content">
-  <section data-section-type="text_and_images" data-section-id="pg048_sec001" data-print-page="42" class="flex items-center justify-center">
+      <div class="container content mx-auto max-w-6xl p-0 bg-white opacity-0 pdf-fidelity-reader" id="content">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 48">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg048.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_images" data-section-id="pg048_sec001" data-print-page="42" class="flex items-center justify-center">
     <div class="relative w-full flex items-center justify-center overflow-hidden max-sm:overflow-visible max-sm:block" style="max-height: var(--page-height, 100vh); min-height: var(--page-height, 100vh);">
       <div class="relative w-full max-w-[1082px] aspect-[1082/1502] bg-white max-sm:aspect-auto max-sm:min-h-0 max-sm:flex max-sm:flex-col max-sm:items-center max-sm:py-6">
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_white_68%,_#f6e7c8_100%)] max-sm:hidden"></div>
@@ -74,11 +78,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

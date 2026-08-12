@@ -21,8 +21,12 @@
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
-      <div class="container content mx-auto max-w-5xl bg-white opacity-0" id="content">
-  <section data-section-type="text_and_images" data-section-id="pg043_sec001" data-print-page="37" role="region" class="w-full px-8 py-8 max-lg:px-6 max-lg:py-7 max-sm:px-3 max-sm:py-5">
+      <div class="container content mx-auto max-w-5xl bg-white opacity-0 pdf-fidelity-reader" id="content">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 43">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg043.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_images" data-section-id="pg043_sec001" data-print-page="37" role="region" class="w-full px-8 py-8 max-lg:px-6 max-lg:py-7 max-sm:px-3 max-sm:py-5">
     <div class="mx-auto w-full max-w-[900px]">
       <div class="px-2 max-sm:px-1">
         <p class="text-[24px] leading-[1.22] text-gray-800 max-lg:text-[21px] max-sm:text-[17px]" data-id="pg043_n0002">(o) Decorate the object before it gets completely dry, then put the object in the shade so that it dries slowly, as shown in Figure 14.</p>
@@ -92,11 +96,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

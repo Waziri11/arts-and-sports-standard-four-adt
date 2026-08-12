@@ -21,8 +21,12 @@
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
-      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0">
-  <section data-section-type="text_and_images" data-section-id="pg036_sec001" data-print-page="30" class="pdf-chapter-opening flex items-center justify-center">
+      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0 pdf-fidelity-reader">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 36">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg036.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_images" data-section-id="pg036_sec001" data-print-page="30" class="pdf-chapter-opening flex items-center justify-center">
     <div class="relative w-full flex items-center justify-center max-lg:px-6 max-sm:px-4 max-sm:py-4">
       <div class="relative w-full max-w-[1082px] aspect-[1082/1502] bg-[radial-gradient(circle_at_center,_white_0%,_white_72%,_#f6d7b2_100%)] overflow-hidden max-lg:aspect-auto max-lg:overflow-visible max-sm:bg-white">
         <div class="absolute top-[8.5%] left-[13%] w-[74%] h-[9%] bg-[#b10f2a] rounded-sm shadow-lg max-lg:relative max-lg:top-auto max-lg:left-auto max-lg:w-[84%] max-lg:h-auto max-lg:mx-auto max-lg:mt-10 max-lg:mb-8 max-sm:w-full max-sm:mt-0 max-sm:mb-4 max-sm:bg-white/90 max-sm:shadow-none">
@@ -83,11 +87,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

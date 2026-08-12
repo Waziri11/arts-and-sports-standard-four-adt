@@ -22,8 +22,12 @@
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
       <h1 class="sr-only" id="page-heading">Arts and Sports Pupil's Book Standard Four</h1>
-      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0">
-  <section data-section-type="text_and_images" data-section-id="pg040_sec001" data-print-page="34" class="flex items-center justify-center">
+      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0 pdf-fidelity-reader">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 40">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg040.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_images" data-section-id="pg040_sec001" data-print-page="34" class="flex items-center justify-center">
     <div class="w-full mx-auto px-8 py-8 max-sm:px-4 max-sm:py-6" style="aspect-ratio: 1082 / 1502; background: linear-gradient(to bottom, #f6e7c9 0%, #ffffff 8%, #ffffff 92%, #f6e7c9 100%);">
       <div class="mx-auto w-full max-w-[92%] bg-white/95 px-[7%] py-[5%] max-sm:max-w-full max-sm:px-4 max-sm:py-5">
         <div class="space-y-8 max-sm:space-y-6 text-[#273248]">
@@ -68,11 +72,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

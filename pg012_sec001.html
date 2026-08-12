@@ -22,8 +22,12 @@
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
       <h1 class="sr-only" id="page-heading">Activity 3</h1>
-      <div class="container content mx-auto max-w-6xl p-0 bg-white opacity-0" id="content">
-  <section data-section-type="text_and_single_image" data-section-id="pg012_sec001" data-print-page="6" class="flex items-center justify-center bg-white">
+      <div class="container content mx-auto max-w-6xl p-0 bg-white opacity-0 pdf-fidelity-reader" id="content">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 12">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg012.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_single_image" data-section-id="pg012_sec001" data-print-page="6" class="flex items-center justify-center bg-white">
     <div class="w-full max-w-[920px] px-12 py-16 max-lg:px-8 max-lg:py-12 max-sm:px-5 max-sm:py-6">
       <div class="space-y-7 max-sm:space-y-5">
         <p class="text-[28px] leading-[1.35] text-gray-800 max-lg:text-[24px] max-sm:text-[22px]" data-id="pg012_n0002">Similarly, you can imitate the movements of other things such as:</p>
@@ -92,11 +96,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

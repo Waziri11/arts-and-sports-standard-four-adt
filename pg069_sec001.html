@@ -22,8 +22,12 @@
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
       <h1 class="sr-only" id="page-heading">Activity 1</h1>
-      <div class="container content mx-auto max-w-6xl p-0 bg-white opacity-0" id="content">
-  <section data-section-type="text_and_single_image" data-section-id="pg069_sec001" data-print-page="63" class="flex items-start justify-center bg-[#f7f3ee] px-6 py-6 max-lg:px-4 max-sm:px-0 max-sm:py-0">
+      <div class="container content mx-auto max-w-6xl p-0 bg-white opacity-0 pdf-fidelity-reader" id="content">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 69">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg069.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_single_image" data-section-id="pg069_sec001" data-print-page="63" class="flex items-start justify-center bg-[#f7f3ee] px-6 py-6 max-lg:px-4 max-sm:px-0 max-sm:py-0">
     <div class="w-full max-w-[1100px] mx-auto bg-white shadow-[0_0_0_1px_rgba(0,0,0,0.04)] overflow-hidden">
       <img data-id="pg069_im001" alt="Page background" class="block w-full max-w-full h-auto object-contain" src="images/pg069_im001.png" style="max-width: 100%; height: auto;">
 
@@ -71,11 +75,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

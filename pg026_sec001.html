@@ -21,8 +21,12 @@
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
-      <div id="content" class="container content mx-auto max-w-6xl bg-white p-0 opacity-0">
-  <section data-section-type="text_and_single_image" data-section-id="pg026_sec001" data-print-page="20" class="pdf-chapter-opening w-full flex justify-center bg-white">
+      <div id="content" class="container content mx-auto max-w-6xl bg-white p-0 opacity-0 pdf-fidelity-reader">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 26">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg026.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_single_image" data-section-id="pg026_sec001" data-print-page="20" class="pdf-chapter-opening w-full flex justify-center bg-white">
     <div class="w-full max-w-5xl px-8 py-8 max-lg:px-6 max-sm:px-4 max-sm:py-6">
       <div class="relative mx-auto mb-8 h-[170px] w-full max-w-4xl overflow-hidden max-lg:h-[150px] max-sm:h-[120px]">
         
@@ -90,11 +94,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

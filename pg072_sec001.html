@@ -21,8 +21,12 @@
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
-      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0">
-  <section data-section-type="text_and_single_image" data-section-id="pg072_sec001" data-print-page="66" class="flex items-center justify-center bg-[#fbf7f2] px-6 py-6 max-lg:px-5 max-lg:py-5 max-sm:px-3 max-sm:py-4">
+      <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0 pdf-fidelity-reader">
+        <div class="pdf-facsimile-shell" role="img" aria-label="Visual reproduction of source PDF page 72">
+          <img class="pdf-facsimile-page" src="images/pdf-pages/pg072.jpg" alt="" width="1082" height="1502" loading="eager" decoding="async">
+        </div>
+  <div class="pdf-html-layer">
+      <section data-section-type="text_and_single_image" data-section-id="pg072_sec001" data-print-page="66" class="flex items-center justify-center bg-[#fbf7f2] px-6 py-6 max-lg:px-5 max-lg:py-5 max-sm:px-3 max-sm:py-4">
     <div class="w-full max-w-[1082px] rounded-[3rem] bg-white px-[11.5%] py-[6.5%] shadow-sm max-lg:px-[12%] max-lg:py-[7%] max-sm:rounded-[1.5rem] max-sm:px-6 max-sm:py-6">
       <div class="space-y-5 max-sm:space-y-4">
         <p class="text-[23px] leading-[1.45] text-gray-800 max-lg:text-[19px] max-sm:text-[16px]" data-id="pg072_n0002">attend these performances to enjoy the beautiful voices of singers, the sounds of musical instruments, movements and the messages of various songs.</p>
@@ -53,11 +57,15 @@
       </div>
     </div>
   </section>
+      </div>
 </div>
     </main>
 
-    <div class="relative z-50" id="interface-container"></div>
+        <button type="button" class="pdf-view-toggle" aria-pressed="false">Show accessible HTML</button>
+
+<div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
+    <script src="./assets/pdf-view.js"></script>
     <script src="./assets/offline-preloader.js"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
