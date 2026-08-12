@@ -17,6 +17,9 @@
 
     <style>
       body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select { font-family: 'Atkinson Hyperlegible','Merriweather',sans-serif; }
+      .cover-book-title { color: #c90000; font-size: 5.4rem; font-weight: 500; line-height: 1; }
+      @media (max-width: 1024px) { .cover-book-title { font-size: 4.2rem; } }
+      @media (max-width: 640px) { .cover-book-title { font-size: 2.6rem; } }
     </style></head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -27,8 +30,8 @@
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_#ffffff_56%,_#f3e1bf_86%,_#e9c98f_100%)]"></div>
 
       <div class="relative z-10 mx-auto w-full max-w-[980px] px-10 py-24 text-center max-lg:px-8 max-lg:py-20 max-sm:px-4 max-sm:py-12">
-        <div class="mx-auto inline-block rounded-[1.75rem] bg-white/80 px-8 py-5 shadow-sm max-sm:px-5 max-sm:py-4">
-          <h1 class="text-[5.4rem] leading-none font-medium text-red-700 max-lg:text-[4.2rem] max-sm:text-[2.6rem]" data-id="pg001_n0002">Arts and Sports</h1>
+        <div class="mx-auto">
+          <h1 class="cover-book-title" data-id="pg001_n0002">Arts and Sports</h1>
         </div>
 
         <h2 class="mt-8 text-[3.2rem] leading-tight font-semibold text-gray-900 max-lg:text-[2.8rem] max-sm:mt-5 max-sm:text-[2rem]" data-id="pg001_n0004">Pupil&#x2019;s Book</h2>
