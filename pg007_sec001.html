@@ -17,68 +17,165 @@
 
     <style>
       body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select { font-family: 'Atkinson Hyperlegible','Merriweather',sans-serif; }
+
+      .pg007-sheet {
+        box-sizing: border-box;
+        width: min(100%, 760px);
+        min-height: 1055px;
+        margin: 0 auto;
+        padding: 70px 70px 76px;
+        color: #20232a;
+        background:
+          radial-gradient(ellipse at center, transparent 68%, rgba(224, 174, 98, .22) 100%),
+          #fff;
+      }
+
+      .pg007-accessible-audio { display: none; }
+
+      .pg007-chapter-header { position: relative; height: 145px; margin-bottom: 23px; }
+      .pg007-green-panel {
+        position: absolute; inset: 8px 100px 45px;
+        border: 2px solid #79bd64;
+        background: #c3e88b;
+      }
+      .pg007-endcap {
+        position: absolute; top: 10px; width: 118px; height: 98px;
+        border: 2px solid #ff8310; border-radius: 24px;
+        background: linear-gradient(90deg, #063d57, #18728d 52%, #083c55);
+      }
+      .pg007-endcap.left { left: 0; }
+      .pg007-endcap.right { right: 0; }
+      .pg007-ribbon {
+        position: absolute; left: 25px; right: 25px; top: 27px;
+        display: grid; place-items: center; height: 62px;
+        border-top: 7px solid #ab2935;
+        background: linear-gradient(#a30b32, #8c0328);
+        box-shadow: 0 2px 0 #671022;
+        color: white;
+      }
+      .pg007-ribbon h1 { margin: -3px 0 0; font-size: 36px !important; font-style: italic; font-weight: 700; line-height: 1; }
+      .pg007-subtitle {
+        position: absolute; inset-inline: 0; bottom: 0;
+        margin: 0; text-align: center; font-size: 25px; font-weight: 700;
+      }
+
+      .pg007-intro { position: relative; margin-top: 4px; }
+      .pg007-intro-label {
+        position: relative; z-index: 2; display: inline-block;
+        margin-left: 0; padding: 8px 14px 10px;
+        border-radius: 22px 22px 0 0;
+        background: #111cff; color: white;
+        font-size: 25px; font-weight: 700; line-height: 1;
+      }
+      .pg007-intro-copy {
+        margin-top: -2px; padding: 24px 15px 15px;
+        border: 2px solid #1826ff; border-radius: 0 22px 22px 22px;
+        background: #e8cfe7;
+        font-style: italic; font-size: 20px; line-height: 1.28;
+      }
+      .pg007-intro-copy p { display: inline; margin: 0; font-size: inherit !important; line-height: inherit !important; }
+      .pg007-intro-copy p + p::before { content: " "; }
+
+      .pg007-think { position: relative; margin-top: 30px; }
+      .pg007-think-head {
+        height: 43px; margin-left: 0; padding-left: 124px;
+        display: flex; align-items: center;
+        background: #ff850d; color: white;
+        clip-path: polygon(5% 0, 97% 0, 100% 33%, 100% 100%, 0 100%, 0 28%);
+      }
+      .pg007-think-head h2 { margin: 0; font-size: 25px !important; font-style: italic; font-weight: 700; line-height: 1; }
+      .pg007-think-icon {
+        position: absolute; z-index: 2; left: 47px; top: -26px;
+        width: 74px; height: 84px; object-fit: contain;
+      }
+      .pg007-think-border {
+        padding: 3px; background: #ff850d;
+        clip-path: polygon(0 0, 100% 0, 100% 78%, 97% 100%, 3% 100%, 0 78%);
+      }
+      .pg007-think-body {
+        padding: 33px 28px 23px;
+        background: #c8eafa;
+        clip-path: polygon(0 0, 100% 0, 100% 77%, 97% 100%, 3% 100%, 0 77%);
+        font-size: 21px; line-height: 1.25;
+      }
+      .pg007-think-body p { margin: 0; font-size: inherit !important; line-height: inherit !important; }
+
+      .pg007-copy { margin-top: 24px; }
+      .pg007-copy + .pg007-copy { margin-top: 22px; }
+      .pg007-copy h2 {
+        margin: 0 0 8px; color: #00a8e7;
+        font-size: 25px !important; font-weight: 700; line-height: 1.12 !important;
+      }
+      .pg007-copy p { display: inline; margin: 0; font-size: 19px !important; line-height: 1.28 !important; }
+      .pg007-copy p + p::before { content: " "; }
+
+      .pg007-page-number {
+        display: grid; width: 44px; height: 44px; margin: 38px auto 0;
+        place-items: center; border-radius: 50%; background: #ca5b00;
+        color: white; font-size: 19px;
+      }
+
+      @media (max-width: 640px) {
+        .pg007-sheet { min-height: 100vh; padding: 38px 24px 100px; }
+        .pg007-chapter-header { height: 126px; }
+        .pg007-green-panel { inset-inline: 45px; }
+        .pg007-endcap { width: 74px; }
+        .pg007-ribbon { left: 10px; right: 10px; }
+        .pg007-ribbon h1 { font-size: 30px !important; }
+        .pg007-intro-label { font-size: 21px; }
+        .pg007-intro-copy { font-size: 17px; }
+        .pg007-think-head { padding-left: 94px; }
+        .pg007-think-icon { left: 27px; }
+        .pg007-copy p { font-size: 17px !important; }
+      }
     </style></head>
 
 <body class="min-h-screen flex items-center justify-center">
     <main class="w-full">
       <div id="content" class="container content mx-auto max-w-6xl p-0 bg-white opacity-0 pdf-fidelity-reader">
   <div class="pdf-html-layer">
-      <section data-section-type="boxed_text" data-section-id="pg007_sec001" data-print-page="1" class="pdf-chapter-opening flex items-center justify-center">
-    <div class="w-full max-w-[980px] mx-auto bg-white px-8 py-10 max-lg:px-6 max-lg:py-8 max-sm:px-4 max-sm:py-6">
-      <div class="relative mx-auto w-full max-w-[860px]">
-        <img data-id="pg007_im001_ai1" alt="Page background header" class="block mx-auto w-full max-w-full h-auto object-contain" src="images/pg007_im001_ai1.png" style="max-width: 100%; height: auto;">
-        <h1 class="absolute inset-x-0 top-[12%] text-center text-[4.4rem] leading-[0.9] italic font-bold text-white max-lg:text-[3.4rem] max-sm:text-[2.2rem]" data-id="pg007_n0002">Chapter One</h1>
-      </div>
+      <section data-section-type="boxed_text" data-section-id="pg007_sec001" data-print-page="1" class="pg007-sheet">
+        <header class="pg007-chapter-header">
+          <div class="pg007-green-panel" aria-hidden="true"></div>
+          <div class="pg007-endcap left" aria-hidden="true"></div>
+          <div class="pg007-endcap right" aria-hidden="true"></div>
+          <div class="pg007-ribbon"><h1 data-id="pg007_n0002">Chapter One</h1></div>
+          <p class="pg007-subtitle" data-id="pg007_im001_ai1">Acting</p>
+        </header>
 
-
-
-      <div class="mt-8 max-sm:mt-6">
-        <div class="relative w-[210px] max-sm:w-[170px]">
-          <img data-id="pg007_im004_ai1" alt="Introduction label" class="block w-full max-w-full h-auto object-contain" src="images/pg007_im004_ai1.png" style="max-width: 100%; height: auto;">
-
-        </div>
-
-        <div class="-mt-2 rounded-[2rem] border-[3px] border-blue-600 bg-[#e6d3e2]/92 px-5 py-7 max-lg:px-5 max-lg:py-6 max-sm:rounded-[1.8rem] max-sm:px-5 max-sm:py-6">
-          <p class="text-[1.15rem] italic leading-[1.35] text-gray-800 max-lg:text-[1.08rem] max-sm:text-[0.98rem]" data-id="pg007_n0008">Acting is one of the elements in the performing arts that conveys messages to society using words and actions.</p>
-          <p class="mt-3 text-[1.15rem] italic leading-[1.35] text-gray-800 max-lg:text-[1.08rem] max-sm:text-[0.98rem]" data-id="pg007_n0009">In this chapter, you will learn how to practise body movements, emotions, and sounds to act out living and non-living things.</p>
-          <p class="mt-3 text-[1.15rem] italic leading-[1.35] text-gray-800 max-lg:text-[1.08rem] max-sm:text-[0.98rem]" data-id="pg007_n0010">The competencies developed will enable you to perform various plays to educate and entertain the community skilfully and confidently.</p>
-        </div>
-      </div>
-
-      <div class="mt-10 max-sm:mt-8">
-        <div class="relative w-full">
-
-          <img alt="" class="absolute left-[7%] top-[-22%] w-[9%] max-w-full h-auto object-contain z-20 max-lg:w-[11%] max-sm:w-[18%] max-sm:top-[-18%]" src="images/pg007_im005_seg001_v1.png" style="max-width: 100%; height: auto;" role="presentation" aria-hidden="true">
-          <div class="absolute left-[20%] top-[17%] z-20 max-sm:left-[30%] max-sm:top-[14%]">
-            <h2 class="text-[1.9rem] italic font-bold text-white leading-none max-lg:text-[1.6rem] max-sm:text-[1.2rem]" data-id="pg007_n0013">Think</h2>
+        <div class="pg007-intro">
+          <div class="pg007-intro-label" data-id="pg007_im004_ai1">Introduction</div>
+          <div class="pg007-intro-copy">
+            <p data-id="pg007_n0008">Acting is one of the elements in the performing arts that conveys messages to society using words and actions.</p>
+            <p data-id="pg007_n0009">In this chapter, you will learn how to practise body movements, emotions, and sounds to act out living and non-living things.</p>
+            <p data-id="pg007_n0010">The competencies developed will enable you to perform various plays to educate and entertain the community skilfully and confidently.</p>
           </div>
         </div>
 
-        <div class="-mt-1 rounded-[0.9rem] border-[3px] border-orange-500 bg-[#b9daee]/95 px-8 py-7 max-lg:px-7 max-lg:py-6 max-sm:px-5 max-sm:py-4">
-          <p class="text-[1.2rem] leading-tight text-gray-800 max-lg:text-[1.1rem] max-sm:text-[1rem]" data-id="pg007_n0014">Body movements in acting</p>
+        <div class="pg007-think">
+          <img class="pg007-think-icon" src="images/pg007_im005_seg001_v1.png" alt="" role="presentation" aria-hidden="true">
+          <div class="pg007-think-head"><h2 data-id="pg007_n0013">Think</h2></div>
+          <div class="pg007-think-border"><div class="pg007-think-body"><p data-id="pg007_n0014">Body movements in acting</p></div></div>
         </div>
-      </div>
 
-      <div class="mt-10 max-sm:mt-8">
-        <h2 class="text-[2.05rem] leading-tight font-bold text-sky-500 max-lg:text-[1.85rem] max-sm:text-[1.45rem]" data-id="pg007_n0016">Acting practices</h2>
-        <div class="mt-3">
-          <p class="text-[1.15rem] leading-[1.3] text-gray-800 max-lg:text-[1.06rem] max-sm:text-[0.98rem]" data-id="pg007_n0018">Acting practices include the preparation of various physical and mental techniques.</p>
-          <p class="mt-1 text-[1.15rem] leading-[1.3] text-gray-800 max-lg:text-[1.06rem] max-sm:text-[0.98rem]" data-id="pg007_n0019">An actor prepares him or herself to develop and understand the behaviour and feelings of the role of the character he or she has to assume in a play.</p>
-          <p class="mt-1 text-[1.15rem] leading-[1.3] text-gray-800 max-lg:text-[1.06rem] max-sm:text-[0.98rem]" data-id="pg007_n0020">This makes the acting even better.</p>
-          <p class="mt-1 text-[1.15rem] leading-[1.3] text-gray-800 max-lg:text-[1.06rem] max-sm:text-[0.98rem]" data-id="pg007_n0021">Acting practices include body movements, acting various emotions and voice projection.</p>
+        <div class="pg007-copy">
+          <h2 data-id="pg007_n0016">Acting practices</h2>
+          <p data-id="pg007_n0018">Acting practices include the preparation of various physical and mental techniques.</p>
+          <p data-id="pg007_n0019">An actor prepares him or herself to develop and understand the behaviour and feelings of the role of the character he or she has to assume in a play.</p>
+          <p data-id="pg007_n0020">This makes the acting even better.</p>
+          <p data-id="pg007_n0021">Acting practices include body movements, acting various emotions and voice projection.</p>
         </div>
-      </div>
 
-      <div class="mt-8 max-sm:mt-6">
-        <h2 class="text-[2.05rem] leading-tight font-bold text-sky-500 max-lg:text-[1.85rem] max-sm:text-[1.45rem]" data-id="pg007_n0023">Body movement practices in acting</h2>
-        <div class="mt-3">
-          <p class="text-[1.15rem] leading-[1.3] text-gray-800 max-lg:text-[1.06rem] max-sm:text-[0.98rem]" data-id="pg007_n0025">Body movements in acting are the way an actor uses his or her body to convey messages without words.</p>
-          <p class="mt-1 text-[1.15rem] leading-[1.3] text-gray-800 max-lg:text-[1.06rem] max-sm:text-[0.98rem]" data-id="pg007_n0026">Body movements are also referred to as body language.</p>
-          <p class="mt-1 text-[1.15rem] leading-[1.3] text-gray-800 max-lg:text-[1.06rem] max-sm:text-[0.98rem]" data-id="pg007_n0027">Body movements include mime, gestures,</p>
+        <div class="pg007-copy">
+          <h2 data-id="pg007_n0023">Body movement practices in acting</h2>
+          <p data-id="pg007_n0025">Body movements in acting are the way an actor uses his or her body to convey messages without words.</p>
+          <p data-id="pg007_n0026">Body movements are also referred to as body language.</p>
+          <p data-id="pg007_n0027">Body movements include mime, gestures,</p>
         </div>
-      </div>
-    </div>
-  </section>
+
+        <span class="pg007-accessible-audio" data-id="pg007_n0028">Page one</span>
+        <span class="pg007-page-number" aria-label="Page one" aria-hidden="true">1</span>
+      </section>
       </div>
 </div>
     </main>
