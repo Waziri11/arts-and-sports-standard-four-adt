@@ -17,6 +17,25 @@
 
     <style>
       body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select { font-family: 'Atkinson Hyperlegible','Merriweather',sans-serif; }
+      .activity-heading-icon {
+        width: 112px;
+        height: 106px;
+        overflow: hidden;
+        flex: 0 0 112px;
+      }
+      .activity-heading-icon img {
+        width: 126px !important;
+        max-width: none !important;
+        height: auto !important;
+      }
+      @media (max-width: 640px) {
+        .activity-heading-icon {
+          width: 96px;
+          height: 91px;
+          flex-basis: 96px;
+        }
+        .activity-heading-icon img { width: 108px !important; }
+      }
     </style></head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -30,14 +49,14 @@
 
     <div class="relative z-10 space-y-0">
       <div class="flex items-end gap-0 min-w-0">
-        <div class="w-[112px] max-sm:w-[126px] shrink-0 border-2 border-orange-400 bg-orange-50 relative z-10">
+        <div class="activity-heading-icon shrink-0 border-2 border-orange-400 bg-orange-50 relative z-10">
           <img alt="" class="block w-full max-w-full h-auto object-contain bg-white" src="images/pg034_im002_seg001_v1.png" style="max-width: 100%; height: auto;" role="presentation" aria-hidden="true">
         </div>
         <div class="flex-1 min-w-0 flex items-end pb-3 max-lg:pb-2 max-sm:pb-1">
           <div class="bg-sky-500 text-white rounded-r-[30px] px-10 max-lg:px-8 max-sm:px-5 py-4 max-lg:py-3 max-sm:py-3 flex items-center w-[430px] max-lg:w-[330px] max-sm:flex-1 max-sm:w-auto shrink-0">
             <h1 class="text-[28px] max-lg:text-[24px] max-sm:text-[22px] leading-none font-bold" data-id="pg034_n0003">Activity 4</h1>
           </div>
-          <div class="h-4 max-sm:hidden bg-sky-500 rounded-r-full flex-1 min-w-[24px]"></div>
+          <div class="h-4 bg-sky-500 rounded-r-full flex-1 min-w-[24px]"></div>
         </div>
       </div>
       <div class="border border-orange-400 bg-orange-100 rounded-b-[18px] px-5 py-4 max-sm:px-4 max-sm:py-4 text-gray-800 space-y-5 max-sm:space-y-4 -mt-px">
@@ -48,14 +67,14 @@
 
     <div class="relative z-10 space-y-0">
       <div class="flex items-end gap-0 min-w-0">
-        <div class="w-[112px] max-sm:w-[126px] shrink-0 border-2 border-orange-400 bg-orange-50 relative z-10">
+        <div class="activity-heading-icon shrink-0 border-2 border-orange-400 bg-orange-50 relative z-10">
           <img alt="" class="block w-full max-w-full h-auto object-contain bg-white" src="images/pg034_im003_seg001_v1.png" style="max-width: 100%; height: auto;" role="presentation" aria-hidden="true">
         </div>
         <div class="flex-1 min-w-0 flex items-end pb-3 max-lg:pb-2 max-sm:pb-1">
           <div class="bg-sky-500 text-white rounded-r-[30px] px-10 max-lg:px-8 max-sm:px-5 py-4 max-lg:py-3 max-sm:py-3 flex items-center w-[430px] max-lg:w-[330px] max-sm:flex-1 max-sm:w-auto shrink-0">
             <h2 class="text-[28px] max-lg:text-[24px] max-sm:text-[22px] leading-none font-bold" data-id="pg034_n0008">Activity 5</h2>
           </div>
-          <div class="h-4 max-sm:hidden bg-sky-500 rounded-r-full flex-1 min-w-[24px]"></div>
+          <div class="h-4 bg-sky-500 rounded-r-full flex-1 min-w-[24px]"></div>
         </div>
       </div>
       <div class="border border-orange-400 bg-orange-100 rounded-b-[18px] px-5 py-4 max-sm:px-4 max-sm:py-4 text-gray-800 space-y-3 -mt-px">
@@ -79,14 +98,14 @@
 
     <div class="relative z-10 space-y-0">
       <div class="flex items-end gap-0 min-w-0">
-        <div class="w-[112px] max-sm:w-[126px] shrink-0 border-2 border-orange-400 bg-orange-50 relative z-10">
+        <div class="activity-heading-icon shrink-0 border-2 border-orange-400 bg-orange-50 relative z-10">
           <img alt="" class="block w-full max-w-full h-auto object-contain bg-white" src="images/pg034_im004_seg001_v1.png" style="max-width: 100%; height: auto;" role="presentation" aria-hidden="true">
         </div>
         <div class="flex-1 min-w-0 flex items-end pb-3 max-lg:pb-2 max-sm:pb-1">
           <div class="bg-sky-500 text-white rounded-r-[30px] px-10 max-lg:px-8 max-sm:px-5 py-4 max-lg:py-3 max-sm:py-3 flex items-center w-[430px] max-lg:w-[330px] max-sm:flex-1 max-sm:w-auto shrink-0">
             <h2 class="text-[28px] max-lg:text-[24px] max-sm:text-[22px] leading-none font-bold" data-id="pg034_n0022">Activity 6</h2>
           </div>
-          <div class="h-4 max-sm:hidden bg-sky-500 rounded-r-full flex-1 min-w-[24px]"></div>
+          <div class="h-4 bg-sky-500 rounded-r-full flex-1 min-w-[24px]"></div>
         </div>
       </div>
       <div class="border border-orange-400 bg-orange-100 rounded-b-[18px] px-5 py-4 max-sm:px-4 max-sm:py-4 text-gray-800 space-y-5 max-sm:space-y-4 -mt-px">
@@ -103,7 +122,7 @@
 <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
     <script src="./assets/pdf-view.js?v=12"></script>
-    <script src="./assets/offline-preloader.js?v=12"></script>
+    <script src="./assets/offline-preloader.js?v=14"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>

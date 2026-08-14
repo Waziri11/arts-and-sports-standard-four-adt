@@ -17,6 +17,18 @@
 
     <style>
       body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select { font-family: 'Atkinson Hyperlegible','Merriweather',sans-serif; }
+      .roman-step-row {
+        display: grid !important;
+        grid-template-columns: 3.5rem minmax(0, 1fr) !important;
+        column-gap: 1rem;
+        align-items: start;
+      }
+      @media (max-width: 640px) {
+        .roman-step-row {
+          grid-template-columns: 2.5rem minmax(0, 1fr) !important;
+          column-gap: 0.5rem;
+        }
+      }
     </style></head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -28,7 +40,7 @@
     <div class="relative w-full overflow-visible bg-[radial-gradient(circle_at_center,_white_0%,_#fbfbfb_68%,_#f6d7ac_100%)] px-16 py-20 max-lg:px-10 max-lg:py-16 max-sm:px-4 max-sm:py-5" style="min-height: 100vh;">
       <div class="mx-auto w-full max-w-5xl rounded-[2rem] bg-white/85 px-10 py-8 shadow-[0_0_0_1px_rgba(255,255,255,0.6)] max-lg:px-6 max-lg:py-6 max-sm:rounded-[1.25rem] max-sm:bg-white/70 max-sm:px-4 max-sm:py-4 max-sm:shadow-none">
         <div class="space-y-8 max-sm:space-y-8">
-          <div class="grid grid-cols-[3.5rem_1fr] gap-x-4 items-start max-sm:grid-cols-1 max-sm:gap-x-0 max-sm:gap-y-2">
+          <div class="roman-step-row">
             <p class="text-[2.1rem] leading-none text-[#d62d2d] max-sm:text-[1.15rem]" data-id="pg033_n0003">(i)</p>
             <div class="space-y-2 max-sm:space-y-3">
               <p class="text-[2rem] leading-[1.25] text-[#d62d2d] max-sm:text-[1.05rem] max-sm:font-semibold" data-id="pg033_n0005">Choose the right pencil.</p>
@@ -37,7 +49,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-[3.5rem_1fr] gap-x-4 items-start max-sm:grid-cols-1 max-sm:gap-x-0 max-sm:gap-y-2">
+          <div class="roman-step-row">
             <p class="text-[2.1rem] leading-none text-[#d62d2d] max-sm:text-[1.15rem]" data-id="pg033_n0009">(ii)</p>
             <div class="space-y-2 max-sm:space-y-3">
               <p class="text-[2rem] leading-[1.25] text-[#d62d2d] max-sm:text-[1.05rem] max-sm:font-semibold" data-id="pg033_n0011">Begin by drawing the guide lines.</p>
@@ -46,7 +58,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-[3.5rem_1fr] gap-x-4 items-start max-sm:grid-cols-1 max-sm:gap-x-0 max-sm:gap-y-2">
+          <div class="roman-step-row">
             <p class="text-[2.1rem] leading-none text-[#d62d2d] max-sm:text-[1.15rem]" data-id="pg033_n0015">(iii)</p>
             <div class="space-y-2 max-sm:space-y-3">
               <p class="text-[2rem] leading-[1.25] text-[#d62d2d] max-sm:text-[1.05rem] max-sm:font-semibold" data-id="pg033_n0017">Basic lines.</p>
@@ -55,7 +67,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-[3.5rem_1fr] gap-x-4 items-start max-sm:grid-cols-1 max-sm:gap-x-0 max-sm:gap-y-2">
+          <div class="roman-step-row">
             <p class="text-[2.1rem] leading-none text-[#d62d2d] max-sm:text-[1.15rem]" data-id="pg033_n0021">(iv)</p>
             <div class="space-y-2 max-sm:space-y-3">
               <p class="text-[2rem] leading-[1.25] text-[#d62d2d] max-sm:text-[1.05rem] max-sm:font-semibold" data-id="pg033_n0023">Add details.</p>
@@ -64,7 +76,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-[3.5rem_1fr] gap-x-4 items-start max-sm:grid-cols-1 max-sm:gap-x-0 max-sm:gap-y-2">
+          <div class="roman-step-row">
             <p class="text-[2.1rem] leading-none text-[#d62d2d] max-sm:text-[1.15rem]" data-id="pg033_n0027">(v)</p>
             <div class="space-y-2 max-sm:space-y-3">
               <p class="text-[2rem] leading-[1.25] text-[#d62d2d] max-sm:text-[1.05rem] max-sm:font-semibold" data-id="pg033_n0029">Add shading.</p>
@@ -73,7 +85,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-[3.5rem_1fr] gap-x-4 items-start max-sm:grid-cols-1 max-sm:gap-x-0 max-sm:gap-y-2">
+          <div class="roman-step-row">
             <p class="text-[2.1rem] leading-none text-[#d62d2d] max-sm:text-[1.15rem]" data-id="pg033_n0033">(vi)</p>
             <div class="space-y-2 max-sm:space-y-3">
               <p class="text-[2rem] leading-[1.25] text-[#d62d2d] max-sm:text-[1.05rem] max-sm:font-semibold" data-id="pg033_n0035">Adjust and finish.</p>
@@ -122,7 +134,7 @@
 <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
     <script src="./assets/pdf-view.js?v=12"></script>
-    <script src="./assets/offline-preloader.js?v=12"></script>
+    <script src="./assets/offline-preloader.js?v=15"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>
