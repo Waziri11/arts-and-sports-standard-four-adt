@@ -2,15 +2,18 @@
   function initializePdfView() {
     var layer = document.querySelector('.pdf-html-layer');
     var facsimile = document.querySelector('.pdf-facsimile-shell');
-    var image = document.querySelector('.pdf-facsimile-page');
     var toggle = document.querySelector('.pdf-view-toggle');
 
-    if (!layer || !facsimile || !image || !toggle) return;
+    if (!layer) return;
 
-    var semanticSection = layer.querySelector('[data-section-type]');
-    var sectionType = semanticSection ? semanticSection.getAttribute('data-section-type') || '' : '';
-    var isActivity = sectionType.indexOf('activity_') === 0 || !!layer.querySelector('[data-activity-item]');
-    var htmlLabel = isActivity ? 'Open interactive activity' : 'Show accessible HTML';
+    // This public link is the Accessible Digital Textbook only. Remove the
+    // source-page facsimile and its view switch so readers always remain in
+    // the semantic, interactive ADT experience.
+    if (facsimile) facsimile.remove();
+    if (toggle) toggle.remove();
+    document.body.classList.add('pdf-html-mode');
+    layer.setAttribute('aria-hidden', 'false');
+    layer.removeAttribute('inert');
 
     // Source watermarks are publishing artifacts, not book content. They used to
     // be exposed to the read-aloud system and were therefore announced between
@@ -76,27 +79,6 @@
       new MutationObserver(applyContinuationFix).observe(correctedContinuation, { childList: true, characterData: true, subtree: true });
     }
 
-    function setMode(showHtml) {
-      document.body.classList.toggle('pdf-html-mode', showHtml);
-      layer.setAttribute('aria-hidden', showHtml ? 'false' : 'true');
-      if (showHtml) layer.removeAttribute('inert');
-      else layer.setAttribute('inert', '');
-      toggle.setAttribute('aria-pressed', showHtml ? 'true' : 'false');
-      toggle.textContent = showHtml ? 'Show PDF view' : htmlLabel;
-    }
-
-    toggle.addEventListener('click', function () {
-      setMode(!document.body.classList.contains('pdf-html-mode'));
-    });
-
-    image.addEventListener('error', function () {
-      setMode(true);
-      toggle.textContent = 'PDF image unavailable - HTML shown';
-    }, { once: true });
-
-    // The corrected semantic HTML is the primary reader. The exact source-page
-    // image remains one click away for visual comparison.
-    setMode(true);
   }
 
   if (document.readyState === 'loading') {
