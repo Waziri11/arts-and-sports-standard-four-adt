@@ -78,6 +78,32 @@
       new MutationObserver(applyContinuationFix).observe(correctedContinuation, { childList: true, characterData: true, subtree: true });
     }
 
+    // Confirmed Roman-number sequences must be announced as numbers rather
+    // than as isolated letters by assistive technology. The two alphabetic
+    // (i) entries on pages 41 and 70 are intentionally excluded.
+    var romanNumberIds = new Set([
+      'pg029_n0007', 'pg029_n0011', 'pg029_n0016', 'pg029_n0020', 'pg029_n0025', 'pg029_n0031', 'pg029_n0037',
+      'pg031_n0022', 'pg031_n0025', 'pg032_n0003', 'pg032_n0006',
+      'pg033_n0003', 'pg033_n0009', 'pg033_n0015', 'pg033_n0021', 'pg033_n0027', 'pg033_n0033',
+      'pg037_n0003', 'pg037_n0006', 'pg037_n0009', 'pg037_n0012', 'pg037_n0015',
+      'pg037_n0021', 'pg037_n0024', 'pg037_n0027', 'pg037_n0033',
+      'pg038_n0002', 'pg038_n0006', 'pg038_n0007',
+      'pg077_n0006', 'pg077_n0007', 'pg077_n0014', 'pg077_n0021', 'pg077_n0028',
+      'pg078_n0002', 'pg078_n0009', 'pg078_n0017', 'pg078_n0026', 'pg078_n0031', 'pg078_n0036', 'pg078_n0041',
+      'pg080_n0016', 'pg080_n0022', 'pg080_n0028'
+    ]);
+    var romanWords = { i: 'one', ii: 'two', iii: 'three', iv: 'four', v: 'five', vi: 'six', vii: 'seven', viii: 'eight', ix: 'nine', x: 'ten' };
+    var romanToken = /\((i|ii|iii|iv|v|vi|vii|viii|ix|x)\)/gi;
+    var romanRange = /\((i|ii|iii|iv|v|vi|vii|viii|ix|x)\)\s*(?:to|[-–—])\s*\((i|ii|iii|iv|v|vi|vii|viii|ix|x)\)/gi;
+    Array.prototype.forEach.call(layer.querySelectorAll('[data-id]'), function (element) {
+      var id = element.getAttribute('data-id');
+      if (!romanNumberIds.has(id)) return;
+      var spokenLabel = (element.textContent || '').trim()
+        .replace(romanRange, function (_, from, to) { return 'Roman numbers ' + romanWords[from.toLowerCase()] + ' to ' + romanWords[to.toLowerCase()]; })
+        .replace(romanToken, function (_, numeral) { return 'Roman number ' + romanWords[numeral.toLowerCase()]; });
+      if (spokenLabel) element.setAttribute('aria-label', spokenLabel);
+    });
+
   }
 
   if (document.readyState === 'loading') {
