@@ -253,6 +253,92 @@ body {
   background: #fde2c2;
 }
 
+/* Source-faithful Think callout shared by every chapter opening. */
+.book-think {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  padding-top: 44px;
+}
+
+.book-think-heading {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  padding: 12px 42px 12px 184px;
+  background: #ff8508;
+  clip-path: polygon(4% 0, 96% 0, 100% 34%, 100% 100%, 96.5% 100%, 96% 94%, 4% 94%, 3.5% 100%, 0 100%, 0 34%);
+}
+
+.book-think-icon {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 68px;
+  width: 76px;
+  height: 108px;
+  object-fit: cover;
+  border: 3px solid #f47b0b;
+  background: #fff;
+}
+
+.book-think-title {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.book-think-panel {
+  margin-top: -5px;
+  padding: 4px;
+  background: #ff8508;
+  clip-path: polygon(3.5% 0, 96.5% 0, 100% 22%, 100% 78%, 96.5% 100%, 3.5% 100%, 0 78%, 0 22%);
+}
+
+.book-think-panel-inner {
+  display: flex;
+  min-height: 126px;
+  align-items: center;
+  padding: 30px 48px;
+  background: #c9e8f7;
+  clip-path: polygon(3.25% 0, 96.75% 0, 100% 22%, 100% 78%, 96.75% 100%, 3.25% 100%, 0 78%, 0 22%);
+}
+
+.book-think-text {
+  color: #20252c;
+  font-size: 1.85rem;
+  line-height: 1.2;
+}
+
+.book-think--compact {
+  padding-top: 28px;
+}
+
+.book-think--compact .book-think-heading {
+  min-height: 46px;
+  padding: 8px 26px 8px 115px;
+}
+
+.book-think--compact .book-think-icon {
+  left: 45px;
+  width: 48px;
+  height: 70px;
+}
+
+.book-think--compact .book-think-title {
+  font-size: 1.35rem;
+}
+
+.book-think--compact .book-think-panel-inner {
+  min-height: 70px;
+  padding: 16px 30px;
+}
+
+.book-think--compact .book-think-text {
+  font-size: 1.15rem;
+}
+
 @media (max-width: 640px) {
   .book-activity-heading {
     grid-template-columns: 5.25rem minmax(9.5rem, 1fr) 2rem;
@@ -271,6 +357,35 @@ body {
 
   .book-activity-rule {
     height: .65rem;
+  }
+
+  .book-think {
+    padding-top: 30px;
+  }
+
+  .book-think-heading {
+    min-height: 58px;
+    padding: 10px 20px 10px 108px;
+    clip-path: polygon(7% 0, 93% 0, 100% 32%, 100% 100%, 0 100%, 0 32%);
+  }
+
+  .book-think-icon {
+    left: 30px;
+    width: 60px;
+    height: 85px;
+  }
+
+  .book-think-title {
+    font-size: 1.45rem;
+  }
+
+  .book-think-panel-inner {
+    min-height: 92px;
+    padding: 22px 28px;
+  }
+
+  .book-think-text {
+    font-size: 1.15rem;
   }
 }
 

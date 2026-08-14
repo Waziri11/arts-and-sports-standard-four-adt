@@ -10,13 +10,84 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
-    <link href="./assets/pdf-fidelity.css?v=9" rel="stylesheet">
+    <link href="./assets/pdf-fidelity.css?v=12" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&amp;display=swap" rel="stylesheet">
 
     <style>
       body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select { font-family: 'Atkinson Hyperlegible','Merriweather',sans-serif; }
+      .pg018-think {
+        position: relative;
+        width: 100%;
+        max-width: 900px;
+        padding-top: 44px;
+      }
+      .pg018-think-heading {
+        position: relative;
+        display: flex;
+        min-height: 76px;
+        align-items: center;
+        padding: 12px 42px 12px 184px;
+        background: #ff8508;
+        clip-path: polygon(4% 0, 96% 0, 100% 34%, 100% 100%, 96.5% 100%, 96% 94%, 4% 94%, 3.5% 100%, 0 100%, 0 34%);
+      }
+      .pg018-think-icon {
+        position: absolute;
+        z-index: 2;
+        left: 68px;
+        top: 0;
+        width: 76px;
+        height: 108px;
+        object-fit: cover;
+        border: 3px solid #f47b0b;
+        background: #fff;
+      }
+      .pg018-think-heading h3 {
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+      .pg018-think-panel {
+        margin-top: -5px;
+        padding: 4px;
+        background: #ff8508;
+        clip-path: polygon(3.5% 0, 96.5% 0, 100% 22%, 100% 78%, 96.5% 100%, 3.5% 100%, 0 78%, 0 22%);
+      }
+      .pg018-think-panel-inner {
+        min-height: 126px;
+        display: flex;
+        align-items: center;
+        padding: 30px 48px;
+        background: #c9e8f7;
+        clip-path: polygon(3.25% 0, 96.75% 0, 100% 22%, 100% 78%, 96.75% 100%, 3.25% 100%, 0 78%, 0 22%);
+      }
+      .pg018-think-panel p {
+        color: #20252c;
+        font-size: 1.85rem;
+        line-height: 1.2;
+      }
+      @media (max-width: 640px) {
+        .pg018-think { padding-top: 30px; }
+        .pg018-think-heading {
+          min-height: 58px;
+          padding: 10px 20px 10px 108px;
+          clip-path: polygon(7% 0, 93% 0, 100% 32%, 100% 100%, 0 100%, 0 32%);
+        }
+        .pg018-think-icon {
+          left: 30px;
+          bottom: 7px;
+          width: 60px;
+          height: 85px;
+        }
+        .pg018-think-heading h3 { font-size: 1.45rem; }
+        .pg018-think-panel-inner {
+          min-height: 92px;
+          padding: 22px 28px;
+        }
+        .pg018-think-panel p { font-size: 1.15rem; }
+      }
     </style></head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -48,13 +119,15 @@
       </div>
     </div>
 
-    <div class="mx-auto max-w-[900px] overflow-hidden border-[3px] border-orange-500 bg-[#cfe6f7] [clip-path:polygon(0_18px,18px_0,calc(100%-18px)_0,100%_18px,100%_calc(100%-18px),calc(100%-18px)_100%,18px_100%,0_calc(100%-18px))] max-sm:[clip-path:none] max-sm:rounded-xl">
-      <div class="relative bg-orange-400 px-10 py-3 max-sm:px-4 max-sm:py-2">
-        <div class="absolute left-5 top-1/2 h-16 w-14 -translate-y-1/2 border-2 border-orange-400 bg-white max-sm:hidden"></div>
-        <h3 class="pl-24 text-[2rem] font-bold text-white max-lg:text-[1.8rem] max-sm:pl-0 max-sm:text-[1.25rem]" data-id="pg018_n0013">Think</h3>
+    <div class="book-think mx-auto">
+      <img class="book-think-icon" src="images/pg018_think_icon.jpg" alt="" role="presentation" aria-hidden="true">
+      <div class="book-think-heading">
+        <h3 class="book-think-title" data-id="pg018_n0013">Think</h3>
       </div>
-      <div class="px-10 py-5 max-sm:px-4 max-sm:py-4">
-        <p class="text-[1.05rem] leading-snug text-gray-800 max-sm:text-[1rem]" data-id="pg018_n0014">Singing in two-part harmony</p>
+      <div class="book-think-panel">
+        <div class="book-think-panel-inner">
+          <p class="book-think-text" data-id="pg018_n0014">Singing in two-part harmony</p>
+        </div>
       </div>
     </div>
 
@@ -94,8 +167,8 @@
 
 <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/pdf-view.js?v=9"></script>
-    <script src="./assets/offline-preloader.js?v=9"></script>
+    <script src="./assets/pdf-view.js?v=12"></script>
+    <script src="./assets/offline-preloader.js?v=12"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>
