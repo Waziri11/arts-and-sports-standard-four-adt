@@ -17,6 +17,20 @@
 
     <style>
       body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select { font-family: 'Atkinson Hyperlegible','Merriweather',sans-serif; }
+      .pg062-activity-heading { position:absolute; top:52.5%; left:11.5%; z-index:10; display:flex; align-items:flex-end; width:77%; }
+      .pg062-activity-icon { width:112px; height:96px; flex:0 0 112px; padding:4px; overflow:hidden; border:3px solid #f47b3a; background:#fff; position:relative; z-index:2; }
+      .pg062-activity-icon img { display:block; width:100%; height:100%; object-fit:contain; }
+      .pg062-activity-bar { display:flex; flex:1; min-width:0; align-items:flex-end; margin-left:-1px; padding-bottom:7px; }
+      .pg062-activity-title { flex:0 0 320px; margin:0; padding:15px 24px; border-radius:0 28px 0 0; background:#40a9dc; color:#fff; font-size:25px; font-weight:700; line-height:1; }
+      .pg062-activity-rule { height:14px; flex:1; border-radius:0 999px 999px 0; background:#40a9dc; }
+      @media (max-width:1024px) { .pg062-activity-heading { top:57.5%; width:82%; } }
+      @media (max-width:640px) {
+        .pg062-activity-heading { position:relative; top:auto; left:auto; width:auto; margin:24px 16px 0; }
+        .pg062-activity-icon { width:86px; height:74px; flex-basis:86px; }
+        .pg062-activity-bar { padding-bottom:5px; }
+        .pg062-activity-title { flex:0 0 auto; padding:12px 17px; border-radius:0 22px 0 0; font-size:18px; }
+        .pg062-activity-rule { height:11px; }
+      }
     </style></head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -44,8 +58,13 @@
           </div>
         </div>
 
-        <h2 class="book-banner-audio-title" data-id="pg062_n0011" style="position:absolute; top:0; left:0; color:transparent; opacity:0.01; pointer-events:none; user-select:none;">Activity 4</h2>
-        <img data-id="pg062_im003" alt="Activity 4 banner" src="images/pg062_im003.png" class="absolute top-[52.5%] left-[11.5%] max-w-[78%] h-auto object-contain z-10 max-lg:top-[57.5%] max-lg:max-w-[82%] max-sm:relative max-sm:top-auto max-sm:left-auto max-sm:block max-sm:mx-4 max-sm:mt-6 max-sm:max-w-[calc(100%-2rem)]" style="max-height: var(--page-height, 100vh); max-width: 100%; height: auto;">
+        <div class="pg062-activity-heading">
+          <div class="pg062-activity-icon"><img alt="" role="presentation" aria-hidden="true" src="images/pg062_im002.png"></div>
+          <div class="pg062-activity-bar">
+            <h2 class="pg062-activity-title" data-id="pg062_n0011">Activity 4</h2>
+            <div class="pg062-activity-rule" aria-hidden="true"></div>
+          </div>
+        </div>
 
         <div class="absolute top-[59.2%] left-[11.5%] w-[77%] bg-orange-100/95 border border-orange-300 rounded-b-2xl rounded-tr-md px-4 py-4 z-10 max-lg:top-[66%] max-lg:w-[82%] max-sm:relative max-sm:top-auto max-sm:left-auto max-sm:w-auto max-sm:mx-4 max-sm:mt-0">
           <p class="text-[21px] leading-relaxed text-gray-800 max-lg:text-[18px] max-sm:text-[16px]" data-id="pg062_n0012">Practise standing and walking with hands without the support of a partner or a wall.</p>
@@ -69,7 +88,7 @@
 
 
 
-        <img data-id="pg062_im002" alt="Small activity icon" src="images/pg062_im002.png" class="absolute opacity-0 pointer-events-none w-[1px] h-[1px] overflow-hidden" style="max-height: var(--page-height, 100vh); max-width: 100%; height: auto;">
+        <img alt="" role="presentation" aria-hidden="true" src="images/pg062_im002.png" class="absolute opacity-0 pointer-events-none w-[1px] h-[1px] overflow-hidden" style="max-height: var(--page-height, 100vh); max-width: 100%; height: auto;">
       </div>
     </div>
   </section>
@@ -79,8 +98,8 @@
 
 <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/pdf-view.js?v=12"></script>
-    <script src="./assets/offline-preloader.js?v=12"></script>
+    <script src="./assets/pdf-view.js?v=18"></script>
+    <script src="./assets/offline-preloader.js?v=19"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>

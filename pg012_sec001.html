@@ -17,6 +17,18 @@
 
     <style>
       body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select { font-family: 'Atkinson Hyperlegible','Merriweather',sans-serif; }
+      .pg012-activity-heading { display:flex; align-items:flex-end; width:100%; }
+      .pg012-activity-icon { width:112px; height:96px; flex:0 0 112px; padding:4px; overflow:hidden; border:3px solid #f47b3a; background:#fff; position:relative; z-index:2; }
+      .pg012-activity-icon img { display:block; width:100%; height:100%; object-fit:contain; }
+      .pg012-activity-bar { display:flex; flex:1; min-width:0; align-items:flex-end; margin-left:-1px; padding-bottom:7px; }
+      .pg012-activity-title { flex:0 0 320px; margin:0; padding:15px 24px; border-radius:0 28px 0 0; background:#40a9dc; color:#fff; font-size:25px; font-weight:700; line-height:1; }
+      .pg012-activity-rule { height:14px; flex:1; border-radius:0 999px 999px 0; background:#40a9dc; }
+      @media (max-width:640px) {
+        .pg012-activity-icon { width:86px; height:74px; flex-basis:86px; }
+        .pg012-activity-bar { padding-bottom:5px; }
+        .pg012-activity-title { flex:0 0 auto; padding:12px 17px; border-radius:0 22px 0 0; font-size:18px; }
+        .pg012-activity-rule { height:11px; }
+      }
     </style></head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -53,11 +65,13 @@
           </div>
         </div>
 
-        <div class="pt-2">
-          <img data-id="pg012_im002" alt="Activity 3 banner" class="block max-w-full h-auto object-contain" src="images/pg012_im002.png" style="max-width: 100%; height: auto;">
+        <div class="pg012-activity-heading pt-2">
+          <div class="pg012-activity-icon"><img src="images/pg009_im001.png" alt="" role="presentation" aria-hidden="true"></div>
+          <div class="pg012-activity-bar">
+            <p class="pg012-activity-title" data-id="pg012_n0018">Activity 3</p>
+            <div class="pg012-activity-rule" aria-hidden="true"></div>
+          </div>
         </div>
-
-        <p class="book-banner-audio-title" data-id="pg012_n0018" style="position:absolute; top:0; left:0; color:transparent; opacity:0.01; pointer-events:none; user-select:none;">Activity 3</p>
 
         <p class="text-[24px] leading-[1.35] text-gray-800 max-lg:text-[22px] max-sm:text-[22px]" data-id="pg012_n0020">Use body movements and voice to act the movements of any non-living thing.</p>
 
@@ -99,7 +113,7 @@
 
 <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/pdf-view.js?v=12"></script>
+    <script src="./assets/pdf-view.js?v=18"></script>
     <script src="./assets/offline-preloader.js?v=12"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>

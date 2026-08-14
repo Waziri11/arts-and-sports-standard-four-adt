@@ -39,16 +39,34 @@
       }
     });
 
+    function markImageDecorative(image) {
+      image.removeAttribute('data-id');
+      image.setAttribute('alt', '');
+      image.setAttribute('role', 'presentation');
+      image.setAttribute('aria-hidden', 'true');
+    }
+
+    function removeActivityHeaderArtwork() {
+      Array.prototype.forEach.call(layer.querySelectorAll('[data-id]'), function (title) {
+        if (!/^activity\s+\d+$/i.test((title.textContent || '').trim())) return;
+        var scope = title.parentElement;
+        for (var depth = 0; scope && scope !== layer && depth < 4; depth += 1, scope = scope.parentElement) {
+          var images = scope.querySelectorAll('img');
+          if (!images.length) continue;
+          Array.prototype.forEach.call(images, markImageDecorative);
+          break;
+        }
+      });
+    }
+
     function removeLateArtifacts() {
       Array.prototype.forEach.call(layer.querySelectorAll('img[data-id]'), function (image) {
         var label = (image.getAttribute('alt') || '').trim();
         if (/^(?:activity\s+\d+\b|think\b|introduction\b)/i.test(label)) {
-          image.removeAttribute('data-id');
-          image.setAttribute('alt', '');
-          image.setAttribute('role', 'presentation');
-          image.setAttribute('aria-hidden', 'true');
+          markImageDecorative(image);
         }
       });
+      removeActivityHeaderArtwork();
       Array.prototype.forEach.call(document.querySelectorAll('button'), function (button) {
         if ((button.textContent || '').trim().toLowerCase() === 'submit') {
           button.hidden = true;

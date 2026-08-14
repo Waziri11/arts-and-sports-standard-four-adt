@@ -17,6 +17,18 @@
 
     <style>
       body, p, h1, h2, h3, h4, h5, h6, span, div, button, input, textarea, select { font-family: 'Atkinson Hyperlegible','Merriweather',sans-serif; }
+      .pg058-activity-heading { display: flex; align-items: flex-end; width: 100%; }
+      .pg058-activity-icon { width: 112px; height: 96px; flex: 0 0 112px; padding: 4px; overflow: hidden; border: 3px solid #f47b3a; background: #fff; position: relative; z-index: 2; }
+      .pg058-activity-icon img { display: block; width: 100%; height: 100%; object-fit: contain; }
+      .pg058-activity-bar { display: flex; flex: 1; min-width: 0; align-items: flex-end; margin-left: -1px; padding-bottom: 7px; }
+      .pg058-activity-title { width: 320px; flex: 0 0 320px; margin: 0; padding: 15px 24px; border-radius: 0 28px 0 0; background: #40a9dc; color: #fff; font-size: 25px; font-weight: 700; line-height: 1; }
+      .pg058-activity-rule { height: 14px; flex: 1; border-radius: 0 999px 999px 0; background: #40a9dc; }
+      @media (max-width: 640px) {
+        .pg058-activity-icon { width: 86px; height: 74px; flex-basis: 86px; }
+        .pg058-activity-bar { padding-bottom: 5px; }
+        .pg058-activity-title { width: auto; flex: 0 0 auto; padding: 12px 17px; border-radius: 0 22px 0 0; font-size: 18px; }
+        .pg058-activity-rule { height: 11px; }
+      }
     </style></head>
 
 <body class="min-h-screen flex items-center justify-center">
@@ -84,16 +96,13 @@
       </div>
 
       <div class="mt-10 max-sm:mt-8">
-        <div class="flex items-end w-full max-sm:flex-col max-sm:items-start max-sm:gap-0">
-          <img data-id="pg058_im001" alt="Activity icon" class="w-[112px] max-w-full h-auto object-contain shrink-0 z-10 max-lg:w-[96px] max-sm:w-[86px]" style="max-height: var(--page-height, 100vh); max-width: 100%; height: auto;" src="images/pg058_im001.png">
-          <div class="flex-1 min-w-0 -ml-[2px] max-sm:ml-0 max-sm:w-full max-sm:-mt-[2px]">
-            <div class="relative w-full overflow-hidden max-sm:min-h-[68px]">
-              <img data-id="pg058_im002_seg002_v1" alt="Activity banner" class="w-full max-w-full h-auto object-contain block max-sm:w-full" style="max-height: var(--page-height, 100vh); max-width: 100%; height: auto;" src="images/pg058_im002_seg002_v1.png">
-              <img data-id="pg058_im002_seg001_v1" alt="Activity banner corner" class="absolute left-0 top-0 w-[140px] max-w-full h-auto object-contain z-10 max-lg:w-[110px] max-sm:w-[96px]" style="max-height: var(--page-height, 100vh); max-width: 100%; height: auto;" src="images/pg058_im002_seg001_v1.png">
-              <div class="absolute left-[20px] top-[14px] z-10 max-lg:left-[14px] max-lg:top-[10px] max-sm:left-[14px] max-sm:top-[10px]">
-                <p class="text-[25px] font-bold leading-none text-white whitespace-nowrap max-lg:text-[18px] max-sm:text-[17px]" data-id="pg058_n0043">Activity 2</p>
-              </div>
-            </div>
+        <div class="pg058-activity-heading">
+          <div class="pg058-activity-icon">
+            <img alt="" role="presentation" aria-hidden="true" src="images/pg058_im001.png">
+          </div>
+          <div class="pg058-activity-bar">
+            <p class="pg058-activity-title" data-id="pg058_n0043">Activity 2</p>
+            <div class="pg058-activity-rule" aria-hidden="true"></div>
           </div>
         </div>
         <div class="w-full rounded-b-[16px] border border-orange-400 bg-orange-100 px-5 py-4 max-sm:px-4 max-sm:py-3">
@@ -108,8 +117,8 @@
 
 <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/pdf-view.js?v=12"></script>
-    <script src="./assets/offline-preloader.js?v=12"></script>
+    <script src="./assets/pdf-view.js?v=18"></script>
+    <script src="./assets/offline-preloader.js?v=18"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>
