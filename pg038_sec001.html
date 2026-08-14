@@ -10,7 +10,7 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
-    <link href="./assets/pdf-fidelity.css" rel="stylesheet">
+    <link href="./assets/pdf-fidelity.css?v=9" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&amp;display=swap" rel="stylesheet">
@@ -59,22 +59,12 @@
       </div>
 
       <div class="mt-4">
-        <div class="flex items-stretch max-sm:items-stretch">
-          <div class="w-[7rem] border-2 border-orange-400 bg-white flex items-center justify-center p-2 max-sm:w-[5.25rem]">
-            <div class="w-full h-full border-b-4 border-black relative min-h-[3.5rem] max-sm:min-h-[2.75rem]">
-              <div class="absolute left-[12%] top-[5%] w-[26%] h-[26%] border-[3px] border-black rounded-full"></div>
-              <div class="absolute left-[18%] top-[28%] w-[3px] h-[38%] bg-black rotate-[20deg]"></div>
-              <div class="absolute left-[20%] top-[48%] w-[28%] h-[3px] bg-black rotate-[25deg]"></div>
-              <div class="absolute left-[35%] top-[58%] w-[22%] h-[3px] bg-black -rotate-[20deg]"></div>
-              <div class="absolute left-[46%] top-[64%] w-[36%] h-[3px] bg-black"></div>
-              <div class="absolute left-[63%] top-[56%] w-[10%] h-[10%] border-[3px] border-black rotate-[25deg]"></div>
-            </div>
-          </div>
-          <div class="flex-1 bg-sky-500 rounded-tr-[1.8rem] px-4 py-3 flex items-center max-sm:px-3 max-sm:py-2">
-            <h1 data-id="pg038_n0013" class="text-[1.15rem] font-bold text-white max-sm:text-[1rem]">Activity 1</h1>
-          </div>
+        <div class="book-activity-heading">
+          <img class="book-activity-icon" src="images/pg016_activity_icon.jpg" alt="" role="presentation" aria-hidden="true">
+          <h1 class="book-activity-title" data-id="pg038_n0013">Activity 1</h1>
+          <div class="book-activity-rule" aria-hidden="true"></div>
         </div>
-        <div class="bg-orange-100 border border-orange-400 rounded-b-[1rem] rounded-tr-[0.3rem] px-4 py-4 space-y-3 max-sm:px-3 max-sm:py-3 max-sm:space-y-2">
+        <div class="book-activity-panel px-4 py-4 space-y-3 max-sm:px-3 max-sm:py-3 max-sm:space-y-2">
           <p data-id="pg038_n0016" class="text-[1.05rem] leading-relaxed max-sm:text-[0.95rem]">(a) Model at least two objects using the slab method;</p>
           <p data-id="pg038_n0018" class="text-[1.05rem] leading-relaxed max-sm:text-[0.95rem]">(b) Display in the class for discussion; then</p>
           <p data-id="pg038_n0020" class="text-[1.05rem] leading-relaxed max-sm:text-[0.95rem]">(c) Store the objects you modelled for the art exhibition at school.</p>
@@ -88,8 +78,8 @@
 
 <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/pdf-view.js"></script>
-    <script src="./assets/offline-preloader.js?v=6"></script>
+    <script src="./assets/pdf-view.js?v=9"></script>
+    <script src="./assets/offline-preloader.js?v=9"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>

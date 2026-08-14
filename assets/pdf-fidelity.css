@@ -209,6 +209,71 @@ body {
   white-space: normal !important;
 }
 
+/* Source-faithful Activity callout used throughout the pupil's book. */
+.book-activity-heading {
+  display: grid;
+  grid-template-columns: 7rem minmax(14rem, 22rem) minmax(2rem, 1fr);
+  align-items: end;
+  width: 100%;
+}
+
+.book-activity-icon {
+  position: relative;
+  z-index: 1;
+  width: 7rem;
+  height: 5.8rem;
+  object-fit: cover;
+  border: 3px solid #f28c28;
+  background: #fff;
+}
+
+.book-activity-title {
+  display: flex;
+  min-height: 3.9rem;
+  align-items: center;
+  padding: .65rem 1.5rem;
+  border-radius: 0 1.75rem 0 0;
+  background: #16a7d5;
+  color: #fff;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.book-activity-rule {
+  height: .8rem;
+  border-radius: 0 999px 999px 0;
+  background: #16a7d5;
+}
+
+.book-activity-panel {
+  margin-top: 0;
+  border: 1px solid #ee9a4f;
+  border-radius: 0 0 1rem 1rem;
+  background: #fde2c2;
+}
+
+@media (max-width: 640px) {
+  .book-activity-heading {
+    grid-template-columns: 5.25rem minmax(9.5rem, 1fr) 2rem;
+  }
+
+  .book-activity-icon {
+    width: 5.25rem;
+    height: 4.5rem;
+  }
+
+  .book-activity-title {
+    min-height: 3.25rem;
+    padding: .55rem 1rem;
+    font-size: 1.15rem;
+  }
+
+  .book-activity-rule {
+    height: .65rem;
+  }
+}
+
 @media (max-width: 640px) {
   #content.pdf-fidelity-reader {
     padding: 0 0 5.75rem !important;

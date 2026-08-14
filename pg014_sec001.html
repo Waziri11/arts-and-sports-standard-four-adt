@@ -10,7 +10,7 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
-    <link href="./assets/pdf-fidelity.css" rel="stylesheet">
+    <link href="./assets/pdf-fidelity.css?v=9" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&amp;display=swap" rel="stylesheet">
@@ -50,15 +50,13 @@
     </div>
 
     <div class="mb-8">
-      <div class="mb-2 flex items-end max-sm:items-center max-sm:gap-2">
-        <div class="h-20 w-20 flex-shrink-0 rounded-full border-2 border-neutral-700 bg-green-50 max-lg:h-16 max-lg:w-16 max-sm:h-12 max-sm:w-12"></div>
-        <div class="ml-3 flex-1 min-w-0 max-sm:ml-0">
-          <div class="inline-block rounded-tl-[28px] rounded-tr-[28px] rounded-br-[28px] bg-sky-500 px-5 py-3 text-[22px] font-bold text-white max-lg:text-[20px] max-sm:px-4 max-sm:py-2 max-sm:text-[16px]" data-id="pg014_n0012">Activity 5</div>
-          <div class="h-3 rounded-r-full bg-sky-500 max-sm:h-2"></div>
-        </div>
+      <div class="book-activity-heading">
+        <img class="book-activity-icon" src="images/pg016_activity_icon.jpg" alt="" role="presentation" aria-hidden="true">
+        <div class="book-activity-title" data-id="pg014_n0012">Activity 5</div>
+        <div class="book-activity-rule" aria-hidden="true"></div>
       </div>
 
-      <div class="rounded-br-2xl border border-orange-300 bg-orange-100 px-6 py-5 max-sm:px-4 max-sm:py-4">
+      <div class="book-activity-panel px-6 py-5 max-sm:px-4 max-sm:py-4">
         <p class="mb-5 text-[20px] leading-relaxed max-lg:text-[18px] max-sm:text-[16px]">
           <span data-id="pg014_n0015">(a) Act out laughing, begin by laughing softly, then gradually raise the volume until it becomes loud.</span>
         </p>
@@ -99,8 +97,8 @@
 
 <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/pdf-view.js"></script>
-    <script src="./assets/offline-preloader.js?v=6"></script>
+    <script src="./assets/pdf-view.js?v=9"></script>
+    <script src="./assets/offline-preloader.js?v=9"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>

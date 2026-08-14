@@ -10,7 +10,7 @@
     <link href="./content/tailwind_output.css" rel="stylesheet">
     <link href="./assets/libs/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="./assets/fonts.css" rel="stylesheet">
-    <link href="./assets/pdf-fidelity.css" rel="stylesheet">
+    <link href="./assets/pdf-fidelity.css?v=9" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&amp;display=swap" rel="stylesheet">
@@ -44,15 +44,12 @@
     </div>
 
     <div class="mb-8 max-sm:mb-6">
-      <div class="flex items-end max-sm:block">
-        <div class="flex h-24 w-28 items-center justify-center border-4 border-orange-400 bg-white max-sm:mb-2 max-sm:h-20 max-sm:w-24">
-          <div class="h-12 w-12 rounded-full border border-neutral-400"></div>
-        </div>
-        <div class="flex-1 rounded-tr-[2rem] rounded-tl-md bg-sky-500 px-5 py-3 max-sm:rounded-tr-[1.5rem] max-sm:rounded-tl-md max-sm:px-4 max-sm:py-2">
-          <span class="block text-[1.1rem] font-bold text-white max-sm:text-[1rem]" data-id="pg052_n0008">Activity 2</span>
-        </div>
+      <div class="book-activity-heading">
+        <img class="book-activity-icon" src="images/pg016_activity_icon.jpg" alt="" role="presentation" aria-hidden="true">
+        <span class="book-activity-title" data-id="pg052_n0008">Activity 2</span>
+        <div class="book-activity-rule" aria-hidden="true"></div>
       </div>
-      <div class="rounded-b-[1rem] rounded-tr-[0.35rem] border border-orange-300 bg-orange-100 px-4 py-4 text-[1.05rem] leading-relaxed max-sm:px-3 max-sm:py-3 max-sm:text-[0.98rem] max-sm:leading-loose">
+      <div class="book-activity-panel px-4 py-4 text-[1.05rem] leading-relaxed max-sm:px-3 max-sm:py-3 max-sm:text-[0.98rem] max-sm:leading-loose">
         <span data-id="pg052_n0010">Compete with your colleagues to prevent the balloon from falling while increasing the obstacles and consider how long each of you will be able to withstand the obstacle.</span>
       </div>
     </div>
@@ -84,8 +81,8 @@
 
 <div class="relative z-50" id="interface-container"></div>
     <div class="relative z-50" id="nav-container"></div>
-    <script src="./assets/pdf-view.js"></script>
-    <script src="./assets/offline-preloader.js?v=6"></script>
+    <script src="./assets/pdf-view.js?v=9"></script>
+    <script src="./assets/offline-preloader.js?v=9"></script>
     <script src="./assets/scorm.js"></script>
     <script src="./assets/base.bundle.local.js"></script>
 </body>

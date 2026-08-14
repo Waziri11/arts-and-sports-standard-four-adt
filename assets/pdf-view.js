@@ -1,4 +1,21 @@
 (function () {
+  // Enable meaningful image descriptions for every reader once. The runtime's
+  // built-in fallback is off, which leaves valid image-description audio out
+  // of the read-aloud queue. The migration marker preserves the user's choice
+  // if they later switch image descriptions off in Accessibility settings.
+  try {
+    if (window.localStorage.getItem('describeImagesDefaultVersion') !== '2') {
+      window.localStorage.setItem('describeImagesMode', 'true');
+      window.localStorage.setItem('describeImagesDefaultVersion', '2');
+      var cookiePath = window.location.pathname.slice(0, window.location.pathname.lastIndexOf('/') + 1) || '/';
+      document.cookie = 'describeImagesMode=true; max-age=31536000; path=' + cookiePath;
+      document.cookie = 'describeImagesDefaultVersion=2; max-age=31536000; path=' + cookiePath;
+    }
+  } catch (_) {
+    // Storage can be unavailable in privacy-restricted contexts. The reader
+    // still loads normally and the setting remains available in its UI.
+  }
+
   function initializePdfView() {
     var layer = document.querySelector('.pdf-html-layer');
 
