@@ -1,31 +1,13 @@
 (function () {
   function initializePdfView() {
     var layer = document.querySelector('.pdf-html-layer');
-    var facsimile = document.querySelector('.pdf-facsimile-shell');
-    var toggle = document.querySelector('.pdf-view-toggle');
 
     if (!layer) return;
 
-    // This public link is the Accessible Digital Textbook only. Remove the
-    // source-page facsimile and its view switch so readers always remain in
-    // the semantic, interactive ADT experience.
-    if (facsimile) facsimile.remove();
-    if (toggle) toggle.remove();
+    // The public reader contains only the semantic, interactive ADT layer.
     document.body.classList.add('pdf-html-mode');
     layer.setAttribute('aria-hidden', 'false');
     layer.removeAttribute('inert');
-
-    // Source watermarks are publishing artifacts, not book content. They used to
-    // be exposed to the read-aloud system and were therefore announced between
-    // paragraphs. Keep the source facsimile available as an optional reference,
-    // but remove these artifacts from the accessible reading layer.
-    Array.prototype.forEach.call(layer.querySelectorAll('*'), function (element) {
-      if ((element.textContent || '').trim().toUpperCase() === 'FOR ONLINE READING ONLY') {
-        element.removeAttribute('data-id');
-        element.setAttribute('aria-hidden', 'true');
-        element.hidden = true;
-      }
-    });
 
     // Banner artwork is decorative when the same Activity/Think/Introduction
     // label is already present as real text. Excluding it prevents duplicated

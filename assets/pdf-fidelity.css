@@ -159,18 +159,6 @@ body {
   font-size: 1rem;
 }
 
-.source-watermark {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  translate: -50% -50%;
-  rotate: -48deg;
-  color: rgb(239 68 68 / 23%);
-  font-size: clamp(2.2rem, 7vw, 4.5rem);
-  font-weight: 700;
-  white-space: nowrap;
-  pointer-events: none;
-}
-
 @media (max-width: 640px) {
   #content {
     box-shadow: none;
@@ -198,55 +186,17 @@ body {
   }
 }
 
-/* Exact source-page view. The original semantic HTML remains available through
-   the page-view toggle, including every interactive activity. */
+/* Accessible Digital Textbook layout. */
 #content.pdf-fidelity-reader {
   box-sizing: border-box;
   width: 100%;
   max-width: none !important;
   min-height: 100vh;
-  padding: 1.5rem 1rem 6.5rem !important;
-  background: #ececec !important;
-}
-
-.pdf-facsimile-shell {
-  width: min(100%, 54.1rem);
-  margin: 0 auto;
-}
-
-.pdf-facsimile-page {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1082 / 1502;
-  object-fit: contain;
+  padding: 0 !important;
   background: #fff;
-  box-shadow: 0 0.35rem 1.35rem rgba(15, 23, 42, 0.2);
 }
 
 .pdf-html-layer {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  margin: -1px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  clip: rect(0 0 0 0) !important;
-  clip-path: inset(50%) !important;
-  border: 0 !important;
-  white-space: nowrap !important;
-}
-
-body.pdf-html-mode #content.pdf-fidelity-reader {
-  padding: 0 !important;
-  background: #fff !important;
-}
-
-body.pdf-html-mode .pdf-facsimile-shell {
-  display: none;
-}
-
-body.pdf-html-mode .pdf-html-layer {
   position: static !important;
   width: auto !important;
   height: auto !important;
@@ -259,42 +209,8 @@ body.pdf-html-mode .pdf-html-layer {
   white-space: normal !important;
 }
 
-.pdf-view-toggle {
-  position: fixed;
-  z-index: 45;
-  top: 1rem;
-  right: 1rem;
-  max-width: calc(100vw - 2rem);
-  border: 2px solid #fff;
-  border-radius: 999px;
-  padding: 0.65rem 1rem;
-  background: #17324d;
-  color: #fff;
-  box-shadow: 0 0.2rem 0.8rem rgba(15, 23, 42, 0.28);
-  font: 700 0.95rem/1.2 'Atkinson Hyperlegible', sans-serif;
-  cursor: pointer;
-}
-
-.pdf-view-toggle:hover,
-.pdf-view-toggle:focus-visible {
-  background: #234e75;
-  outline: 3px solid #fbbf24;
-  outline-offset: 2px;
-}
-
 @media (max-width: 640px) {
   #content.pdf-fidelity-reader {
     padding: 0 0 5.75rem !important;
-  }
-
-  .pdf-facsimile-page {
-    box-shadow: none;
-  }
-
-  .pdf-view-toggle {
-    top: 0.55rem;
-    right: 0.55rem;
-    padding: 0.55rem 0.8rem;
-    font-size: 0.82rem;
   }
 }
