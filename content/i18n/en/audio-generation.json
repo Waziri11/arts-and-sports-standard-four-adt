@@ -1,0 +1,14 @@
+{
+  "voice": "en-TZ-ImaniNeural",
+  "provider": "Microsoft Edge Text-to-Speech",
+  "generator": "edge-tts 7.2.8",
+  "rate": "-5%",
+  "generatedOn": "2026-08-14",
+  "mappedTextIds": 3203,
+  "distinctAudioFiles": 2631,
+  "generatedVoicedFiles": 2629,
+  "silentEmptyTextFiles": [
+    "pg014_n0002.mp3",
+    "pg014_n0002_easy_read.mp3"
+  ]
+}
