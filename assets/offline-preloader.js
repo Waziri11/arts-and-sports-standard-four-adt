@@ -9,6 +9,9 @@
     var clean = String(url).split("?")[0].split("#")[0];
     if (BASE_DIR && clean.indexOf(BASE_DIR) === 0) clean = clean.slice(BASE_DIR.length);
     if (clean.indexOf("./") === 0) clean = clean.slice(2);
+    // Load post-processing updates from their canonical files instead of the
+    // older generated inline snapshot.
+    if (clean === "assets/config.json" || clean === "content/i18n/en/videos.json") return null;
     var withDot = "./" + clean;
     if (Object.prototype.hasOwnProperty.call(INLINE, withDot)) return withDot;
     if (Object.prototype.hasOwnProperty.call(INLINE, clean)) return clean;

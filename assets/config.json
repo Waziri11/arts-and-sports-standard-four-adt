@@ -1,6 +1,6 @@
 {
   "title": "Arts and Sports Pupil's Book Standard Four",
-  "bundleVersion": "22",
+  "bundleVersion": "23",
   "languages": {
     "available": [
       "en"
@@ -8,7 +8,7 @@
     "default": "en"
   },
   "features": {
-    "signLanguage": false,
+    "signLanguage": true,
     "easyRead": true,
     "glossary": true,
     "eli5": false,
