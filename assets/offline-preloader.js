@@ -9,7 +9,12 @@
   var nativeSetAttribute = Element.prototype.setAttribute;
   Element.prototype.setAttribute = function (name, value) {
     if (this.tagName === "VIDEO" && String(name).toLowerCase() === "src") {
+      var originalValue = value;
       value = rewriteSignVideoUrl(value);
+      if (value !== originalValue) {
+        this.muted = true;
+        this.defaultMuted = true;
+      }
     }
     return nativeSetAttribute.call(this, name, value);
   };
@@ -20,7 +25,12 @@
       enumerable: videoSrcDescriptor.enumerable,
       get: videoSrcDescriptor.get,
       set: function (value) {
-        return videoSrcDescriptor.set.call(this, rewriteSignVideoUrl(value));
+        var rewritten = rewriteSignVideoUrl(value);
+        if (rewritten !== value) {
+          this.muted = true;
+          this.defaultMuted = true;
+        }
+        return videoSrcDescriptor.set.call(this, rewritten);
       }
     });
   }
