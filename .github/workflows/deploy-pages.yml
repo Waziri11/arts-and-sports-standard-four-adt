@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -23,6 +23,12 @@ jobs:
     steps:
       - name: Check out the book
         uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout: |
+            /*
+            !/videos/
+          sparse-checkout-cone-mode: false
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
