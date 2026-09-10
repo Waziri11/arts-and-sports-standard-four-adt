@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Whole-book sign-language playback verification</title>
+<style>body{font:16px system-ui;margin:24px}button{padding:12px}iframe{width:390px;height:360px;border:1px solid #ccc}pre{white-space:pre-wrap}#players{display:flex;gap:8px}</style>
+<h1>Whole-book sign-language playback verification</h1>
+<p>Loads every real reader page and checks muted playback at the start, middle, and end of its video.</p>
+<button id="run">Check all 79 pages</button><p id="status">Ready</p><div id="players"></div><pre id="results"></pre>
+<script>
+const root=new URL('../',location.href),results=[],status=document.querySelector('#status');
+const delay=ms=>new Promise(r=>setTimeout(r,ms));
+async function until(fn,label,ms=60000){const deadline=Date.now()+ms;while(Date.now()<deadline){if(fn())return;await delay(100)}throw Error('Timed out: '+label)}
+async function inspect(frame,page,position,expected){
+ frame.src=new URL(page.href+'?video-check=27',root);
+ await until(()=>{try{return frame.contentDocument?.querySelector('meta[name="page-section-id"]')?.content===String(position)}catch{return false}},'reader page');
+ await until(()=>frame.contentDocument.querySelector('[aria-label="Sign language"]'),'sign-language control');
+ const control=frame.contentDocument.querySelector('[aria-label="Sign language"]');
+ if(control.getAttribute('aria-pressed')!=='true')control.click();
+ await until(()=>frame.contentDocument.querySelector('video'),'video element');
+ const v=frame.contentDocument.querySelector('video');
+ await until(()=>v.readyState>=2||v.error,'video data');
+ if(v.error)throw Error('Media '+v.error.code+': '+v.error.message);
+ if(!v.currentSrc.endsWith('/'+expected))throw Error('Wrong video: '+v.currentSrc);
+ const samples=[];
+ for(const fraction of [0,.5,.95]){
+  v.currentTime=v.duration*fraction;
+  await until(()=>!v.seeking&&v.readyState>=2,'seek');
+  await v.play();const initial=v.currentTime;
+  await until(()=>v.currentTime>initial+.2,'advancing playback',15000);
+  if(!v.muted||v.volume!==0||v.playbackRate!==1)throw Error('Incorrect mute or speed');
+  samples.push({fraction,time:v.currentTime,frames:v.getVideoPlaybackQuality().totalVideoFrames});
+ }
+ if(samples.some(s=>s.frames<1))throw Error('No decoded frames');
+ v.pause();return {position,page:page.href,video:expected,duration:v.duration,source:v.currentSrc,samples,passed:true};
+}
+document.querySelector('#run').onclick=async()=>{
+ document.querySelector('#run').disabled=true;results.length=0;
+ const pages=await (await fetch(new URL('content/pages.json',root))).json();
+ const mappings=await (await fetch(new URL('content/i18n/en/videos.json',root))).json();let cursor=0;
+ async function worker(){const frame=document.createElement('iframe');frame.allow='autoplay';document.querySelector('#players').append(frame);
+ while(cursor<pages.length){const i=cursor++;let row;
+  try{row=await inspect(frame,pages[i],i+1,mappings['video-'+(i+1)])}catch(e){row={position:i+1,page:pages[i].href,passed:false,error:e.message}}
+  results.push(row);status.textContent=results.length+'/'+pages.length+' checked; '+results.filter(r=>!r.passed).length+' failures';
+  document.querySelector('#results').textContent=JSON.stringify(results.sort((a,b)=>a.position-b.position),null,2);
+ }frame.remove()}
+ // Reader preferences synchronize across tabs, so test pages sequentially.
+ await worker();status.textContent+=' — COMPLETE';document.querySelector('#run').disabled=false;
+};
+</script></html>

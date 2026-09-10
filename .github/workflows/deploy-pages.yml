@@ -30,6 +30,14 @@ jobs:
             !/videos/
           sparse-checkout-cone-mode: false
 
+      - name: Check sign-language playback regressions
+        run: node --test tests/sign-language.test.cjs
+
+      - name: Check embedded reader resources are current
+        run: |
+          python3 scripts/refresh-offline-preloader.py
+          git diff --exit-code -- assets/offline-preloader.js
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
