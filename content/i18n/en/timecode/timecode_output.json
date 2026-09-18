@@ -1,1 +1,1898 @@
-{}
+{
+  "cover_n0001": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Arts",
+            "start": 0.103,
+            "end": 0.484
+          },
+          {
+            "text": "and",
+            "start": 0.563,
+            "end": 0.708
+          },
+          {
+            "text": "Sports",
+            "start": 0.8,
+            "end": 1.353
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0001_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Arts",
+            "start": 0.103,
+            "end": 0.484
+          },
+          {
+            "text": "and",
+            "start": 0.563,
+            "end": 0.708
+          },
+          {
+            "text": "Sports",
+            "start": 0.8,
+            "end": 1.353
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0003": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Standard",
+            "start": 0.103,
+            "end": 0.603
+          },
+          {
+            "text": "Four",
+            "start": 0.668,
+            "end": 0.918
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0003_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Standard",
+            "start": 0.103,
+            "end": 0.603
+          },
+          {
+            "text": "Four",
+            "start": 0.668,
+            "end": 0.918
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0002": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Pupil’s",
+            "start": 0.103,
+            "end": 0.629
+          },
+          {
+            "text": "Book",
+            "start": 0.721,
+            "end": 1.024
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0002_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Pupil’s",
+            "start": 0.103,
+            "end": 0.629
+          },
+          {
+            "text": "Book",
+            "start": 0.721,
+            "end": 1.024
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0004": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Tanzania",
+            "start": 0.103,
+            "end": 0.682
+          },
+          {
+            "text": "Institute",
+            "start": 0.747,
+            "end": 1.326
+          },
+          {
+            "text": "of",
+            "start": 1.405,
+            "end": 1.563
+          },
+          {
+            "text": "Education",
+            "start": 1.616,
+            "end": 2.326
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0004_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Tanzania",
+            "start": 0.103,
+            "end": 0.682
+          },
+          {
+            "text": "Institute",
+            "start": 0.747,
+            "end": 1.326
+          },
+          {
+            "text": "of",
+            "start": 1.405,
+            "end": 1.563
+          },
+          {
+            "text": "Education",
+            "start": 1.616,
+            "end": 2.326
+          }
+        ]
+      }
+    ]
+  },
+  "cover_im001": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Three",
+            "start": 0.103,
+            "end": 0.392
+          },
+          {
+            "text": "illustrations",
+            "start": 0.458,
+            "end": 1.3
+          },
+          {
+            "text": "show",
+            "start": 1.339,
+            "end": 1.497
+          },
+          {
+            "text": "a",
+            "start": 1.563,
+            "end": 1.642
+          },
+          {
+            "text": "person",
+            "start": 1.734,
+            "end": 2.089
+          },
+          {
+            "text": "reading",
+            "start": 2.116,
+            "end": 2.524
+          },
+          {
+            "text": "pupils",
+            "start": 2.787,
+            "end": 3.234
+          },
+          {
+            "text": "singing",
+            "start": 3.234,
+            "end": 3.682
+          },
+          {
+            "text": "and",
+            "start": 3.761,
+            "end": 3.918
+          },
+          {
+            "text": "playing",
+            "start": 3.958,
+            "end": 4.234
+          },
+          {
+            "text": "musical",
+            "start": 4.313,
+            "end": 4.774
+          },
+          {
+            "text": "instruments",
+            "start": 4.826,
+            "end": 5.563
+          },
+          {
+            "text": "and",
+            "start": 5.734,
+            "end": 5.905
+          },
+          {
+            "text": "pupils",
+            "start": 5.971,
+            "end": 6.405
+          },
+          {
+            "text": "forming",
+            "start": 6.445,
+            "end": 6.787
+          },
+          {
+            "text": "an",
+            "start": 6.813,
+            "end": 6.945
+          },
+          {
+            "text": "acrobatic",
+            "start": 6.945,
+            "end": 7.616
+          },
+          {
+            "text": "pyramid",
+            "start": 7.695,
+            "end": 8.182
+          }
+        ]
+      }
+    ]
+  },
+  "cover_im001_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Three",
+            "start": 0.103,
+            "end": 0.392
+          },
+          {
+            "text": "illustrations",
+            "start": 0.458,
+            "end": 1.3
+          },
+          {
+            "text": "show",
+            "start": 1.339,
+            "end": 1.497
+          },
+          {
+            "text": "a",
+            "start": 1.563,
+            "end": 1.642
+          },
+          {
+            "text": "person",
+            "start": 1.734,
+            "end": 2.089
+          },
+          {
+            "text": "reading",
+            "start": 2.116,
+            "end": 2.524
+          },
+          {
+            "text": "pupils",
+            "start": 2.787,
+            "end": 3.234
+          },
+          {
+            "text": "singing",
+            "start": 3.234,
+            "end": 3.682
+          },
+          {
+            "text": "and",
+            "start": 3.761,
+            "end": 3.918
+          },
+          {
+            "text": "playing",
+            "start": 3.958,
+            "end": 4.234
+          },
+          {
+            "text": "musical",
+            "start": 4.313,
+            "end": 4.774
+          },
+          {
+            "text": "instruments",
+            "start": 4.826,
+            "end": 5.563
+          },
+          {
+            "text": "and",
+            "start": 5.734,
+            "end": 5.905
+          },
+          {
+            "text": "pupils",
+            "start": 5.971,
+            "end": 6.405
+          },
+          {
+            "text": "forming",
+            "start": 6.445,
+            "end": 6.787
+          },
+          {
+            "text": "an",
+            "start": 6.813,
+            "end": 6.945
+          },
+          {
+            "text": "acrobatic",
+            "start": 6.945,
+            "end": 7.616
+          },
+          {
+            "text": "pyramid",
+            "start": 7.695,
+            "end": 8.182
+          }
+        ]
+      }
+    ]
+  },
+  "cover_im002": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "The",
+            "start": 0.103,
+            "end": 0.3
+          },
+          {
+            "text": "Tanzania",
+            "start": 0.353,
+            "end": 0.892
+          },
+          {
+            "text": "Institute",
+            "start": 0.958,
+            "end": 1.537
+          },
+          {
+            "text": "of",
+            "start": 1.603,
+            "end": 1.747
+          },
+          {
+            "text": "Education",
+            "start": 1.8,
+            "end": 2.392
+          },
+          {
+            "text": "logo",
+            "start": 2.484,
+            "end": 2.813
+          }
+        ]
+      }
+    ]
+  },
+  "cover_im002_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "The",
+            "start": 0.103,
+            "end": 0.3
+          },
+          {
+            "text": "Tanzania",
+            "start": 0.353,
+            "end": 0.892
+          },
+          {
+            "text": "Institute",
+            "start": 0.958,
+            "end": 1.537
+          },
+          {
+            "text": "of",
+            "start": 1.603,
+            "end": 1.747
+          },
+          {
+            "text": "Education",
+            "start": 1.8,
+            "end": 2.392
+          },
+          {
+            "text": "logo",
+            "start": 2.484,
+            "end": 2.813
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0005": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Property",
+            "start": 0.103,
+            "end": 0.603
+          },
+          {
+            "text": "of",
+            "start": 0.655,
+            "end": 0.734
+          },
+          {
+            "text": "the",
+            "start": 0.787,
+            "end": 0.866
+          },
+          {
+            "text": "Government",
+            "start": 0.945,
+            "end": 1.432
+          },
+          {
+            "text": "of",
+            "start": 1.432,
+            "end": 1.524
+          },
+          {
+            "text": "the",
+            "start": 1.563,
+            "end": 1.642
+          },
+          {
+            "text": "United",
+            "start": 1.708,
+            "end": 2.168
+          },
+          {
+            "text": "Republic",
+            "start": 2.221,
+            "end": 2.747
+          },
+          {
+            "text": "of",
+            "start": 2.747,
+            "end": 2.84
+          },
+          {
+            "text": "Tanzania",
+            "start": 2.918,
+            "end": 3.471
+          },
+          {
+            "text": "Not",
+            "start": 3.655,
+            "end": 3.879
+          },
+          {
+            "text": "for",
+            "start": 3.945,
+            "end": 4.076
+          },
+          {
+            "text": "Sale",
+            "start": 4.168,
+            "end": 4.458
+          }
+        ]
+      }
+    ]
+  },
+  "cover_n0005_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Property",
+            "start": 0.103,
+            "end": 0.603
+          },
+          {
+            "text": "of",
+            "start": 0.655,
+            "end": 0.734
+          },
+          {
+            "text": "the",
+            "start": 0.787,
+            "end": 0.866
+          },
+          {
+            "text": "Government",
+            "start": 0.945,
+            "end": 1.432
+          },
+          {
+            "text": "of",
+            "start": 1.432,
+            "end": 1.524
+          },
+          {
+            "text": "the",
+            "start": 1.563,
+            "end": 1.642
+          },
+          {
+            "text": "United",
+            "start": 1.708,
+            "end": 2.168
+          },
+          {
+            "text": "Republic",
+            "start": 2.221,
+            "end": 2.747
+          },
+          {
+            "text": "of",
+            "start": 2.747,
+            "end": 2.84
+          },
+          {
+            "text": "Tanzania",
+            "start": 2.918,
+            "end": 3.471
+          },
+          {
+            "text": "Not",
+            "start": 3.655,
+            "end": 3.879
+          },
+          {
+            "text": "for",
+            "start": 3.945,
+            "end": 4.076
+          },
+          {
+            "text": "Sale",
+            "start": 4.168,
+            "end": 4.458
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0002": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Tanzania",
+            "start": 0.103,
+            "end": 0.682
+          },
+          {
+            "text": "Institute",
+            "start": 0.747,
+            "end": 1.326
+          },
+          {
+            "text": "of",
+            "start": 1.405,
+            "end": 1.563
+          },
+          {
+            "text": "Education",
+            "start": 1.616,
+            "end": 2.326
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0002_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Tanzania",
+            "start": 0.103,
+            "end": 0.682
+          },
+          {
+            "text": "Institute",
+            "start": 0.747,
+            "end": 1.326
+          },
+          {
+            "text": "of",
+            "start": 1.405,
+            "end": 1.563
+          },
+          {
+            "text": "Education",
+            "start": 1.616,
+            "end": 2.326
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0001": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Other",
+            "start": 0.103,
+            "end": 0.379
+          },
+          {
+            "text": "Books",
+            "start": 0.471,
+            "end": 0.787
+          },
+          {
+            "text": "by",
+            "start": 0.879,
+            "end": 1.063
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0001_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Other",
+            "start": 0.103,
+            "end": 0.379
+          },
+          {
+            "text": "Books",
+            "start": 0.471,
+            "end": 0.787
+          },
+          {
+            "text": "by",
+            "start": 0.879,
+            "end": 1.063
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im001": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "The",
+            "start": 0.103,
+            "end": 0.3
+          },
+          {
+            "text": "Tanzania",
+            "start": 0.353,
+            "end": 0.892
+          },
+          {
+            "text": "Institute",
+            "start": 0.958,
+            "end": 1.537
+          },
+          {
+            "text": "of",
+            "start": 1.603,
+            "end": 1.747
+          },
+          {
+            "text": "Education",
+            "start": 1.8,
+            "end": 2.392
+          },
+          {
+            "text": "logo",
+            "start": 2.484,
+            "end": 2.813
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im001_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "The",
+            "start": 0.103,
+            "end": 0.3
+          },
+          {
+            "text": "Tanzania",
+            "start": 0.353,
+            "end": 0.892
+          },
+          {
+            "text": "Institute",
+            "start": 0.958,
+            "end": 1.537
+          },
+          {
+            "text": "of",
+            "start": 1.603,
+            "end": 1.747
+          },
+          {
+            "text": "Education",
+            "start": 1.8,
+            "end": 2.392
+          },
+          {
+            "text": "logo",
+            "start": 2.484,
+            "end": 2.813
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0003": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Standard",
+            "start": 0.103,
+            "end": 0.603
+          },
+          {
+            "text": "Four",
+            "start": 0.668,
+            "end": 0.918
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0003_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Standard",
+            "start": 0.103,
+            "end": 0.603
+          },
+          {
+            "text": "Four",
+            "start": 0.668,
+            "end": 0.918
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im002": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Mathematics",
+            "start": 0.103,
+            "end": 1.116
+          },
+          {
+            "text": "Standard",
+            "start": 2.105,
+            "end": 2.618
+          },
+          {
+            "text": "Four",
+            "start": 2.658,
+            "end": 2.882
+          },
+          {
+            "text": "book",
+            "start": 2.974,
+            "end": 3.132
+          },
+          {
+            "text": "cover",
+            "start": 3.224,
+            "end": 3.632
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im002_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Mathematics",
+            "start": 0.103,
+            "end": 1.116
+          },
+          {
+            "text": "Standard",
+            "start": 2.105,
+            "end": 2.618
+          },
+          {
+            "text": "Four",
+            "start": 2.658,
+            "end": 2.882
+          },
+          {
+            "text": "book",
+            "start": 2.974,
+            "end": 3.132
+          },
+          {
+            "text": "cover",
+            "start": 3.224,
+            "end": 3.632
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im003": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Science",
+            "start": 0.103,
+            "end": 0.853
+          },
+          {
+            "text": "Standard",
+            "start": 1.829,
+            "end": 2.342
+          },
+          {
+            "text": "Four",
+            "start": 2.382,
+            "end": 2.605
+          },
+          {
+            "text": "book",
+            "start": 2.697,
+            "end": 2.855
+          },
+          {
+            "text": "cover",
+            "start": 2.947,
+            "end": 3.355
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im003_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Science",
+            "start": 0.103,
+            "end": 0.853
+          },
+          {
+            "text": "Standard",
+            "start": 1.829,
+            "end": 2.342
+          },
+          {
+            "text": "Four",
+            "start": 2.382,
+            "end": 2.605
+          },
+          {
+            "text": "book",
+            "start": 2.697,
+            "end": 2.855
+          },
+          {
+            "text": "cover",
+            "start": 2.947,
+            "end": 3.355
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im004": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Geography",
+            "start": 0.103,
+            "end": 0.76
+          },
+          {
+            "text": "and",
+            "start": 0.839,
+            "end": 0.958
+          },
+          {
+            "text": "the",
+            "start": 1.024,
+            "end": 1.063
+          },
+          {
+            "text": "Environment",
+            "start": 1.142,
+            "end": 1.958
+          },
+          {
+            "text": "Standard",
+            "start": 2.987,
+            "end": 3.5
+          },
+          {
+            "text": "Four",
+            "start": 3.539,
+            "end": 3.763
+          },
+          {
+            "text": "book",
+            "start": 3.855,
+            "end": 4.013
+          },
+          {
+            "text": "cover",
+            "start": 4.105,
+            "end": 4.513
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im004_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Geography",
+            "start": 0.103,
+            "end": 0.76
+          },
+          {
+            "text": "and",
+            "start": 0.839,
+            "end": 0.958
+          },
+          {
+            "text": "the",
+            "start": 1.024,
+            "end": 1.063
+          },
+          {
+            "text": "Environment",
+            "start": 1.142,
+            "end": 1.958
+          },
+          {
+            "text": "Standard",
+            "start": 2.987,
+            "end": 3.5
+          },
+          {
+            "text": "Four",
+            "start": 3.539,
+            "end": 3.763
+          },
+          {
+            "text": "book",
+            "start": 3.855,
+            "end": 4.013
+          },
+          {
+            "text": "cover",
+            "start": 4.105,
+            "end": 4.513
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im005": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "English",
+            "start": 0.103,
+            "end": 0.708
+          },
+          {
+            "text": "Standard",
+            "start": 1.697,
+            "end": 2.211
+          },
+          {
+            "text": "Four",
+            "start": 2.25,
+            "end": 2.474
+          },
+          {
+            "text": "book",
+            "start": 2.566,
+            "end": 2.724
+          },
+          {
+            "text": "cover",
+            "start": 2.816,
+            "end": 3.224
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im005_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "English",
+            "start": 0.103,
+            "end": 0.708
+          },
+          {
+            "text": "Standard",
+            "start": 1.697,
+            "end": 2.211
+          },
+          {
+            "text": "Four",
+            "start": 2.25,
+            "end": 2.474
+          },
+          {
+            "text": "book",
+            "start": 2.566,
+            "end": 2.724
+          },
+          {
+            "text": "cover",
+            "start": 2.816,
+            "end": 3.224
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im006": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Kiswahili",
+            "start": 0.103,
+            "end": 0.813
+          },
+          {
+            "text": "Standard",
+            "start": 1.829,
+            "end": 2.342
+          },
+          {
+            "text": "Four",
+            "start": 2.382,
+            "end": 2.605
+          },
+          {
+            "text": "book",
+            "start": 2.697,
+            "end": 2.855
+          },
+          {
+            "text": "cover",
+            "start": 2.947,
+            "end": 3.355
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im006_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Kiswahili",
+            "start": 0.103,
+            "end": 0.813
+          },
+          {
+            "text": "Standard",
+            "start": 1.829,
+            "end": 2.342
+          },
+          {
+            "text": "Four",
+            "start": 2.382,
+            "end": 2.605
+          },
+          {
+            "text": "book",
+            "start": 2.697,
+            "end": 2.855
+          },
+          {
+            "text": "cover",
+            "start": 2.947,
+            "end": 3.355
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im007": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Historia",
+            "start": 0.103,
+            "end": 0.695
+          },
+          {
+            "text": "ya",
+            "start": 0.734,
+            "end": 0.8
+          },
+          {
+            "text": "Tanzania",
+            "start": 0.866,
+            "end": 1.366
+          },
+          {
+            "text": "na",
+            "start": 1.405,
+            "end": 1.524
+          },
+          {
+            "text": "Maadili",
+            "start": 1.55,
+            "end": 2.037
+          },
+          {
+            "text": "Standard",
+            "start": 3.053,
+            "end": 3.566
+          },
+          {
+            "text": "Four",
+            "start": 3.605,
+            "end": 3.829
+          },
+          {
+            "text": "book",
+            "start": 3.921,
+            "end": 4.079
+          },
+          {
+            "text": "cover",
+            "start": 4.171,
+            "end": 4.579
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im007_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Historia",
+            "start": 0.103,
+            "end": 0.695
+          },
+          {
+            "text": "ya",
+            "start": 0.734,
+            "end": 0.8
+          },
+          {
+            "text": "Tanzania",
+            "start": 0.866,
+            "end": 1.366
+          },
+          {
+            "text": "na",
+            "start": 1.405,
+            "end": 1.524
+          },
+          {
+            "text": "Maadili",
+            "start": 1.55,
+            "end": 2.037
+          },
+          {
+            "text": "Standard",
+            "start": 3.053,
+            "end": 3.566
+          },
+          {
+            "text": "Four",
+            "start": 3.605,
+            "end": 3.829
+          },
+          {
+            "text": "book",
+            "start": 3.921,
+            "end": 4.079
+          },
+          {
+            "text": "cover",
+            "start": 4.171,
+            "end": 4.579
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im009": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Kichina",
+            "start": 0.103,
+            "end": 0.655
+          },
+          {
+            "text": "Standard",
+            "start": 1.632,
+            "end": 2.145
+          },
+          {
+            "text": "Four",
+            "start": 2.184,
+            "end": 2.408
+          },
+          {
+            "text": "book",
+            "start": 2.5,
+            "end": 2.658
+          },
+          {
+            "text": "cover",
+            "start": 2.75,
+            "end": 3.158
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im009_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Kichina",
+            "start": 0.103,
+            "end": 0.655
+          },
+          {
+            "text": "Standard",
+            "start": 1.632,
+            "end": 2.145
+          },
+          {
+            "text": "Four",
+            "start": 2.184,
+            "end": 2.408
+          },
+          {
+            "text": "book",
+            "start": 2.5,
+            "end": 2.658
+          },
+          {
+            "text": "cover",
+            "start": 2.75,
+            "end": 3.158
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im008": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Bonjour",
+            "start": 0.103,
+            "end": 0.76
+          },
+          {
+            "text": "les",
+            "start": 0.787,
+            "end": 1.116
+          },
+          {
+            "text": "amis",
+            "start": 1.168,
+            "end": 1.655
+          },
+          {
+            "text": "Méthode",
+            "start": 2.632,
+            "end": 3.066
+          },
+          {
+            "text": "de",
+            "start": 3.158,
+            "end": 3.263
+          },
+          {
+            "text": "Français",
+            "start": 3.289,
+            "end": 3.855
+          },
+          {
+            "text": "Standard",
+            "start": 4.868,
+            "end": 5.382
+          },
+          {
+            "text": "Four",
+            "start": 5.421,
+            "end": 5.645
+          },
+          {
+            "text": "book",
+            "start": 5.737,
+            "end": 5.895
+          },
+          {
+            "text": "cover",
+            "start": 5.987,
+            "end": 6.395
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im008_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Bonjour",
+            "start": 0.103,
+            "end": 0.76
+          },
+          {
+            "text": "les",
+            "start": 0.787,
+            "end": 1.116
+          },
+          {
+            "text": "amis",
+            "start": 1.168,
+            "end": 1.655
+          },
+          {
+            "text": "Méthode",
+            "start": 2.632,
+            "end": 3.066
+          },
+          {
+            "text": "de",
+            "start": 3.158,
+            "end": 3.263
+          },
+          {
+            "text": "Français",
+            "start": 3.289,
+            "end": 3.855
+          },
+          {
+            "text": "Standard",
+            "start": 4.868,
+            "end": 5.382
+          },
+          {
+            "text": "Four",
+            "start": 5.421,
+            "end": 5.645
+          },
+          {
+            "text": "book",
+            "start": 5.737,
+            "end": 5.895
+          },
+          {
+            "text": "cover",
+            "start": 5.987,
+            "end": 6.395
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im010": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Kiarabu",
+            "start": 0.103,
+            "end": 0.734
+          },
+          {
+            "text": "Standard",
+            "start": 1.711,
+            "end": 2.224
+          },
+          {
+            "text": "Four",
+            "start": 2.263,
+            "end": 2.487
+          },
+          {
+            "text": "book",
+            "start": 2.579,
+            "end": 2.737
+          },
+          {
+            "text": "cover",
+            "start": 2.829,
+            "end": 3.237
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_im010_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Kiarabu",
+            "start": 0.103,
+            "end": 0.734
+          },
+          {
+            "text": "Standard",
+            "start": 1.711,
+            "end": 2.224
+          },
+          {
+            "text": "Four",
+            "start": 2.263,
+            "end": 2.487
+          },
+          {
+            "text": "book",
+            "start": 2.579,
+            "end": 2.737
+          },
+          {
+            "text": "cover",
+            "start": 2.829,
+            "end": 3.237
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0004": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "I",
+            "start": 0.103,
+            "end": 0.313
+          },
+          {
+            "text": "S",
+            "start": 0.405,
+            "end": 0.668
+          },
+          {
+            "text": "B",
+            "start": 0.774,
+            "end": 0.879
+          },
+          {
+            "text": "N",
+            "start": 0.971,
+            "end": 1.247
+          },
+          {
+            "text": "9",
+            "start": 1.458,
+            "end": 1.774
+          },
+          {
+            "text": "7",
+            "start": 1.813,
+            "end": 2.221
+          },
+          {
+            "text": "8",
+            "start": 2.287,
+            "end": 2.497
+          },
+          {
+            "text": "9",
+            "start": 2.761,
+            "end": 2.997
+          },
+          {
+            "text": "9",
+            "start": 3.063,
+            "end": 3.261
+          },
+          {
+            "text": "1",
+            "start": 3.326,
+            "end": 3.603
+          },
+          {
+            "text": "2",
+            "start": 3.642,
+            "end": 3.866
+          },
+          {
+            "text": "7",
+            "start": 4.103,
+            "end": 4.484
+          },
+          {
+            "text": "5",
+            "start": 4.524,
+            "end": 4.774
+          },
+          {
+            "text": "6",
+            "start": 4.826,
+            "end": 5.234
+          },
+          {
+            "text": "1",
+            "start": 5.445,
+            "end": 5.695
+          },
+          {
+            "text": "2",
+            "start": 5.761,
+            "end": 5.971
+          },
+          {
+            "text": "0",
+            "start": 6.261,
+            "end": 6.668
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0004_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "I",
+            "start": 0.103,
+            "end": 0.313
+          },
+          {
+            "text": "S",
+            "start": 0.405,
+            "end": 0.668
+          },
+          {
+            "text": "B",
+            "start": 0.774,
+            "end": 0.879
+          },
+          {
+            "text": "N",
+            "start": 0.971,
+            "end": 1.247
+          },
+          {
+            "text": "9",
+            "start": 1.458,
+            "end": 1.774
+          },
+          {
+            "text": "7",
+            "start": 1.813,
+            "end": 2.221
+          },
+          {
+            "text": "8",
+            "start": 2.287,
+            "end": 2.497
+          },
+          {
+            "text": "9",
+            "start": 2.761,
+            "end": 2.997
+          },
+          {
+            "text": "9",
+            "start": 3.063,
+            "end": 3.261
+          },
+          {
+            "text": "1",
+            "start": 3.326,
+            "end": 3.603
+          },
+          {
+            "text": "2",
+            "start": 3.642,
+            "end": 3.866
+          },
+          {
+            "text": "7",
+            "start": 4.103,
+            "end": 4.484
+          },
+          {
+            "text": "5",
+            "start": 4.524,
+            "end": 4.774
+          },
+          {
+            "text": "6",
+            "start": 4.826,
+            "end": 5.234
+          },
+          {
+            "text": "1",
+            "start": 5.445,
+            "end": 5.695
+          },
+          {
+            "text": "2",
+            "start": 5.761,
+            "end": 5.971
+          },
+          {
+            "text": "0",
+            "start": 6.261,
+            "end": 6.668
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0005": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Property",
+            "start": 0.103,
+            "end": 0.603
+          },
+          {
+            "text": "of",
+            "start": 0.655,
+            "end": 0.734
+          },
+          {
+            "text": "the",
+            "start": 0.787,
+            "end": 0.866
+          },
+          {
+            "text": "Government",
+            "start": 0.945,
+            "end": 1.432
+          },
+          {
+            "text": "of",
+            "start": 1.432,
+            "end": 1.524
+          },
+          {
+            "text": "the",
+            "start": 1.563,
+            "end": 1.642
+          },
+          {
+            "text": "United",
+            "start": 1.708,
+            "end": 2.168
+          },
+          {
+            "text": "Republic",
+            "start": 2.221,
+            "end": 2.747
+          },
+          {
+            "text": "of",
+            "start": 2.747,
+            "end": 2.84
+          },
+          {
+            "text": "Tanzania",
+            "start": 2.918,
+            "end": 3.471
+          },
+          {
+            "text": "Not",
+            "start": 3.655,
+            "end": 3.879
+          },
+          {
+            "text": "for",
+            "start": 3.945,
+            "end": 4.076
+          },
+          {
+            "text": "Sale",
+            "start": 4.168,
+            "end": 4.458
+          }
+        ]
+      }
+    ]
+  },
+  "back_cover_n0005_easy_read": {
+    "timecodes": [
+      null,
+      {
+        "word_timestamps": [
+          {
+            "text": "Property",
+            "start": 0.103,
+            "end": 0.603
+          },
+          {
+            "text": "of",
+            "start": 0.655,
+            "end": 0.734
+          },
+          {
+            "text": "the",
+            "start": 0.787,
+            "end": 0.866
+          },
+          {
+            "text": "Government",
+            "start": 0.945,
+            "end": 1.432
+          },
+          {
+            "text": "of",
+            "start": 1.432,
+            "end": 1.524
+          },
+          {
+            "text": "the",
+            "start": 1.563,
+            "end": 1.642
+          },
+          {
+            "text": "United",
+            "start": 1.708,
+            "end": 2.168
+          },
+          {
+            "text": "Republic",
+            "start": 2.221,
+            "end": 2.747
+          },
+          {
+            "text": "of",
+            "start": 2.747,
+            "end": 2.84
+          },
+          {
+            "text": "Tanzania",
+            "start": 2.918,
+            "end": 3.471
+          },
+          {
+            "text": "Not",
+            "start": 3.655,
+            "end": 3.879
+          },
+          {
+            "text": "for",
+            "start": 3.945,
+            "end": 4.076
+          },
+          {
+            "text": "Sale",
+            "start": 4.168,
+            "end": 4.458
+          }
+        ]
+      }
+    ]
+  }
+}

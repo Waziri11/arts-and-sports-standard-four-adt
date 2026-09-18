@@ -20,23 +20,27 @@ function setup(host='https://waziri11.github.io/arts-and-sports-standard-four-ad
   return {video,audio,Media,context};
 }
 const wait=()=>new Promise(r=>setTimeout(r,240));
-test('signing plays without narration and stays muted at natural speed',async()=>{const {video}=setup();await video.play();await wait();assert.equal(video.paused,false);assert.equal(video.muted,true);assert.equal(video.volume,0);video.playbackRate=2;video.emit('ratechange');assert.equal(video.playbackRate,1);assert.match(video.src,/26cb970.*\/videos\/page_7.mp4$/);});
+test('signing plays without narration and stays muted at natural speed',async()=>{const {video}=setup();await video.play();await wait();assert.equal(video.paused,false);assert.equal(video.muted,true);assert.equal(video.volume,0);video.playbackRate=2;video.emit('ratechange');assert.equal(video.playbackRate,1);assert.match(video.src,/26cb970.*\/videos\/page_6.mp4$/);});
 test('local copies use their own video folder',()=>{const {video}=setup('http://localhost:8765/book/index.html');assert.equal(video.src,'http://localhost:8765/book/videos/page_7.mp4');});
 test('successful narration starts signing; pause and end stop it',async()=>{const {audio,video}=setup();await audio.play();assert.equal(video.paused,false);audio.pause();await wait();assert.equal(video.paused,true);await audio.play();assert.equal(video.paused,false);audio.ended=true;audio.emit('ended');await wait();assert.equal(video.paused,true);});
 test('blocked narration and UI sounds do not start signing',async()=>{const {audio,video,Media}=setup();audio.reject=true;await assert.rejects(audio.play());assert.equal(video.plays,0);const sound=new Media('AUDIO');sound.src='./assets/sounds/click.mp3';await sound.play();assert.equal(video.plays,0);});
 test('successive narration segments do not pause or restart the video',async()=>{const {audio,video,Media}=setup();await audio.play();video.currentTime=12;audio.pause();const next=new Media('AUDIO');next.src='./content/i18n/en/audio/pg007_n0002.mp3';await next.play();await wait();assert.equal(video.paused,false);assert.equal(video.currentTime,12);assert.equal(video.plays,1);});
 test('transient media errors reload the same video without losing its position',async()=>{const {video}=setup();video.isConnected=true;video.currentTime=14;video.duration=100;video.error={code:2};video.load=function(){this.loads=(this.loads||0)+1;this.error=null;this.currentTime=0;this.emit('loadedmetadata');};video.emit('error');await new Promise(r=>setTimeout(r,1600));assert.equal(video.loads,1);assert.equal(video.currentTime,14);assert.equal(video.paused,false);});
 
-test('published filename casing is preserved',()=>{const {video}=setup();video.src='./content/i18n/en/video/Page_24.mp4';assert.match(video.src,/\/videos\/Page_24.mp4$/);});
+test('renumbered published videos preserve the original source and its casing',()=>{const {video}=setup();video.src='./content/i18n/en/video/page_24.mp4';assert.match(video.src,/\/videos\/Page_23.mp4$/);video.src='./content/i18n/en/video/page_19.mp4';assert.match(video.src,/\/videos\/Page_18.mp4$/);});
+test('both covers use the new local files on published and local readers',()=>{for(const host of ['https://waziri11.github.io/arts-and-sports-standard-four-adt/','http://127.0.0.1:5500/']){const {video}=setup(host);for(const position of [1,81]){video.src='./content/i18n/en/video/page_'+position+'.mp4';assert.equal(video.src,host+'videos/page_'+position+'.mp4');}}});
 test('all reading positions use exact committed media names and current embedded manifests',()=>{
  const pages=JSON.parse(fs.readFileSync('content/pages.json'));
  const mappings=JSON.parse(fs.readFileSync('content/i18n/en/videos.json'));
  const config=JSON.parse(fs.readFileSync('assets/config.json'));
- const tracked=new Set(require('node:child_process').execFileSync('git',['ls-files','videos/'],{encoding:'utf8'}).trim().split('\n'));
+ // The deployment uses a sparse checkout; local checks verify the working files.
+ const tracked=new Set(process.env.CI ? require('node:child_process').execFileSync('git',['ls-files','videos/'],{encoding:'utf8'}).trim().split('\n') : fs.readdirSync('videos').map(name=>'videos/'+name));
  assert.equal(Object.keys(mappings).length,pages.length);
  pages.forEach((page,i)=>{assert.ok(tracked.has('videos/'+mappings['video-'+(i+1)]),'Missing exact-case media at position '+(i+1));const html=fs.readFileSync(page.href,'utf8');assert.ok(html.includes('./assets/sign-language.js?v='+config.bundleVersion));});
  const source=fs.readFileSync('assets/offline-preloader.js','utf8');
- const inline=JSON.parse(source.split('  var INLINE = ')[1].split(';\n')[0]);
+ const inline=JSON.parse(source.split('  var INLINE = ')[1].split(/;\r?\n/)[0]);
  assert.deepEqual(inline['./content/i18n/en/videos.json'],mappings);
  assert.deepEqual(inline['./assets/config.json'],config);
+ assert.deepEqual(inline['./content/pages.json'],pages);
+ pages.forEach(page=>assert.equal(inline['./'+page.href],fs.readFileSync(page.href,'utf8').replace(/\r\n/g,'\n')));
 });

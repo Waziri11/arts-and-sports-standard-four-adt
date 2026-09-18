@@ -3,9 +3,11 @@
 
   // Keep the media revision stable while the reader receives independent fixes.
   var remoteBase = 'https://raw.githubusercontent.com/Waziri11/arts-and-sports-standard-four-adt/26cb97006f18e92b7db0d86ae36cb1827387ba65/videos/';
+  // Interior files retain their immutable published source after local renumbering.
+  var remoteFiles = {"page_2.mp4":"page_1.mp4","page_3.mp4":"page_2.mp4","page_4.mp4":"page_3.mp4","page_5.mp4":"page_4.mp4","page_6.mp4":"page_5.mp4","page_7.mp4":"page_6.mp4","page_8.mp4":"page_7.mp4","page_9.mp4":"page_8.mp4","page_10.mp4":"page_9.mp4","page_11.mp4":"page_10.mp4","page_12.mp4":"page_11.mp4","page_13.mp4":"page_12.mp4","page_14.mp4":"page_13.mp4","page_15.mp4":"page_14.mp4","page_16.mp4":"page_15.mp4","page_17.mp4":"page_16.mp4","page_18.mp4":"page_17.mp4","page_19.mp4":"Page_18.mp4","page_20.mp4":"Page_19.mp4","page_21.mp4":"Page_20.mp4","page_22.mp4":"Page_21.mp4","page_23.mp4":"Page_22.mp4","page_24.mp4":"Page_23.mp4","page_25.mp4":"Page_24.mp4","page_26.mp4":"Page_25.mp4","page_27.mp4":"Page_26.mp4","page_28.mp4":"Page_27.mp4","page_29.mp4":"Page_28.mp4","page_30.mp4":"Page_29.mp4","page_31.mp4":"Page_30.mp4","page_32.mp4":"Page_31.mp4","page_33.mp4":"Page_32.mp4","page_34.mp4":"Page_33.mp4","page_35.mp4":"Page_34.mp4","page_36.mp4":"Page_35.mp4","page_37.mp4":"Page_36.mp4","page_38.mp4":"Page_37.mp4","page_39.mp4":"Page_38.mp4","page_40.mp4":"Page_39.mp4","page_41.mp4":"Page_40.mp4","page_42.mp4":"Page_41.mp4","page_43.mp4":"Page_42.mp4","page_44.mp4":"Page_43.mp4","page_45.mp4":"Page_44.mp4","page_46.mp4":"page_45.mp4","page_47.mp4":"page_46.mp4","page_48.mp4":"page_47.mp4","page_49.mp4":"page_48.mp4","page_50.mp4":"page_49.mp4","page_51.mp4":"page_50.mp4","page_52.mp4":"page_51.mp4","page_53.mp4":"page_52.mp4","page_54.mp4":"page_53.mp4","page_55.mp4":"page_54.mp4","page_56.mp4":"page_55.mp4","page_57.mp4":"page_56.mp4","page_58.mp4":"page_57.mp4","page_59.mp4":"page_58.mp4","page_60.mp4":"page_59.mp4","page_61.mp4":"page_60.mp4","page_62.mp4":"page_61.mp4","page_63.mp4":"page_62.mp4","page_64.mp4":"page_63.mp4","page_65.mp4":"page_64.mp4","page_66.mp4":"page_65.mp4","page_67.mp4":"page_66.mp4","page_68.mp4":"page_67.mp4","page_69.mp4":"page_68.mp4","page_70.mp4":"page_69.mp4","page_71.mp4":"page_70.mp4","page_72.mp4":"page_71.mp4","page_73.mp4":"page_72.mp4","page_74.mp4":"page_73.mp4","page_75.mp4":"page_74.mp4","page_76.mp4":"page_75.mp4","page_77.mp4":"page_76.mp4","page_78.mp4":"page_77.mp4","page_79.mp4":"page_78.mp4","page_80.mp4":"page_79.mp4"};
   var bookBase = new URL('./', location.href);
-  var videoBase = location.hostname === 'waziri11.github.io'
-    ? remoteBase : new URL('videos/', bookBase).href;
+  var localBase = new URL('videos/', bookBase).href;
+  var published = location.hostname === 'waziri11.github.io';
   var nativePlay = HTMLMediaElement.prototype.play;
   var nativePause = HTMLMediaElement.prototype.pause;
   var nativeSetAttribute = Element.prototype.setAttribute;
@@ -21,12 +23,16 @@
     var prefix = new URL('content/i18n/', bookBase).href;
     if (url.href.indexOf(prefix) !== 0) return value;
     var match = url.href.slice(prefix.length).match(/^en\/video\/(page_\d+\.mp4)(?:[?#].*)?$/i);
-    return match ? videoBase + match[1] : value;
+    if (!match) return value;
+    var filename = match[1].toLowerCase();
+    return published && remoteFiles[filename]
+      ? remoteBase + remoteFiles[filename] : localBase + filename;
   }
 
   function isSignVideo(media) {
     return media && media.tagName === 'VIDEO' &&
-      String(media.currentSrc || media.src).indexOf(videoBase) === 0;
+      (String(media.currentSrc || media.src).indexOf(localBase) === 0 ||
+       String(media.currentSrc || media.src).indexOf(remoteBase) === 0);
   }
 
   function prepare(video) {

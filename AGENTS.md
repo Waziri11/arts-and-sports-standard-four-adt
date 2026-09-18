@@ -8,10 +8,32 @@ This document describes the structure of this Accessible Digital Textbook (ADT) 
 
 - **Source language**: `en`
 - **Available languages in this bundle**: `en`
-- **Total pages**: 77
+- **Total reader pages**: 81 (including the front and back covers)
 - **Glossary**: yes
 
 ## Quick Overview
+
+Current cover integration: `index.html` is the front cover (`cover_sec001`),
+`pg001_sec001.html` is the approval certificate at reader position 2, and
+`back_cover.html` is the final cover at position 81. Existing `pgNNN` text and
+section IDs remain stable; `page-section-id` and `videos/page_N.mp4` follow the
+reader position. Page-specific narration filenames also use `page_N_` prefixes;
+shared clips retain their descriptive names. See `scripts/cover-narration.json`
+and `scripts/verify-cover-media.py` for cover narration and attachment checks.
+The bundle lives directly in this directory, rather than in an `adt/` subfolder.
+The pipeline examples below describe the original conversion layout.
+
+The current responsive UI is copied from Writing Standard 1: `assets/base.bundle.local.js`,
+`assets/reader-ui.css`, and `assets/mobile-sheet-drag.{css,js}`. Keep these in sync
+as a set. `scripts/reader-toolbar-reference.json` records the source hashes;
+`scripts/verify-reader-toolbar.py` checks all page includes, offline HTML and
+SCORM packaging. Preserve `content/tailwind_output.css` for existing book content.
+
+Deployment uses `scripts/prepare-pages.py` to validate and stage runtime files
+for GitHub Pages. Do not publish maintenance reports, tests or generation data.
+Unused original runtime files and source page renders have been removed; the
+older pipeline layout examples below are historical references. Keep all media
+registered in the active manifests, including Easy Read and glossary narration.
 
 An ADT bundle is a self-contained, offline-capable web app for reading a book. It has:
 

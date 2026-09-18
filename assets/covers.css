@@ -1,0 +1,40 @@
+html, body.book-cover-page { margin: 0; background: #ececec; }
+.book-cover-page { font-family: 'Atkinson Hyperlegible', Arial, sans-serif; }
+.book-cover h1, .book-cover h2, .book-cover p { font-family: 'Atkinson Hyperlegible', Arial, sans-serif; }
+.book-cover-page main { width: 100%; }
+.book-cover-content { width: min(100%, 650px); margin: 0 auto 88px; box-shadow: 0 2px 20px #0002; }
+.book-cover { box-sizing: border-box; padding: 28px 28px 38px; color: #292929; background: linear-gradient(160deg, #ffc47f, #ffe8ca 42%, #ffcf99 72%, #ffc07a); }
+.book-cover__title { text-align: center; margin: 0 0 20px; color: #009bcc; }
+.book-cover__title h1 { margin: 0; font-size: clamp(2rem, 7vw, 3.5rem); line-height: 1.1; font-weight: 800; text-shadow: 1px 1px #424242; }
+.book-cover__subtitle { margin: 8px 0; font-size: clamp(1.4rem, 4.4vw, 2rem); font-weight: 700; }
+.book-cover__standard { margin: 8px 0 0; font-size: clamp(1.25rem, 4vw, 1.8rem); font-weight: 700; }
+.book-cover__art { display: block; width: 100%; height: auto; border-radius: 16px; }
+.book-cover__artwork { position: relative; }
+.book-cover__front-logo { position: absolute; left: 84.72%; top: 91.35%; width: 15.97%; height: auto; }
+.book-cover--front .book-cover__publisher { margin-right: 17%; min-height: 42px; }
+.book-cover__publisher { display: flex; align-items: center; justify-content: flex-end; gap: 10px; margin: 6px 0 18px; }
+.book-cover__publisher p { margin: 0; padding: 7px 12px; border-radius: 20px; background: #fff; font-weight: 700; text-align: center; }
+.book-cover__publisher img { flex: 0 0 auto; width: 70px; height: auto; border-radius: 50%; }
+.book-cover__ownership { margin: 12px 0 0; padding: 10px 15px; background: #ffdc00; border-radius: 20px; text-align: center; font-size: clamp(.8rem, 2.5vw, 1rem); line-height: 1.4; font-weight: 700; font-style: italic; }
+.book-cover__back-heading { display: flex; align-items: center; gap: 10px; margin: 18px 0 18px; padding: 6px 10px; background: #fff; border: 3px solid #a74d13; border-radius: 18px; text-align: center; }
+.book-cover__back-heading div { flex: 1; }
+.book-cover__back-heading h1 { margin: 0; color: #009bcc; font-size: clamp(1.25rem, 4vw, 1.7rem); font-weight: 700; }
+.book-cover__back-heading p { margin: 5px 0 0; font-size: clamp(1rem, 3.2vw, 1.4rem); font-weight: 700; }
+.book-cover__back-heading img { width: 80px; height: auto; }
+.book-cover__catalogue { margin: 0 12px; border: 3px solid #a74d13; border-radius: 0 0 15px 15px; overflow: hidden; }
+.book-cover__catalogue h2 { margin: 0; padding: 8px; background: #a74d13; color: #fff; text-align: center; font-size: 1.2rem; font-weight: 700; }
+.book-cover__books { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px 14px; padding: 12px; }
+.book-cover__books img { display: block; width: 100%; height: auto; }
+.book-cover__isbn { width: max-content; max-width: 100%; margin: 14px 12px 12px auto; padding: 5px 8px; background: #fff; }
+.book-cover__isbn p { margin: 0; font-size: .85rem; }
+.book-cover__isbn img { display: block; width: 124px; height: auto; margin: auto; }
+@media (max-width: 480px) {
+  .book-cover { padding: 20px 14px 28px; }
+  .book-cover__publisher { gap: 4px; }
+  .book-cover__publisher p { font-size: .85rem; padding: 6px; }
+  .book-cover__publisher img { width: 52px; }
+  .book-cover__back-heading { margin-top: 0; }
+  .book-cover__back-heading img { width: 56px; }
+  .book-cover__catalogue { margin: 0; }
+  .book-cover__books { gap: 8px; padding: 8px; }
+}

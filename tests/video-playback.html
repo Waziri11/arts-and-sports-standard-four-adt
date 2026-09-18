@@ -4,17 +4,17 @@
 <style>body{font:16px system-ui;margin:24px}button{padding:12px}iframe{width:390px;height:360px;border:1px solid #ccc}pre{white-space:pre-wrap}#players{display:flex;gap:8px}</style>
 <h1>Whole-book sign-language playback verification</h1>
 <p>Loads every real reader page and checks muted playback at the start, middle, and end of its video.</p>
-<button id="run">Check all 79 pages</button><p id="status">Ready</p><div id="players"></div><pre id="results"></pre>
+<button id="run">Check all 81 pages</button><p id="status">Ready</p><div id="players"></div><pre id="results"></pre>
 <script>
 const root=new URL('../',location.href),results=[],status=document.querySelector('#status');
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
 async function until(fn,label,ms=60000){const deadline=Date.now()+ms;while(Date.now()<deadline){if(fn())return;await delay(100)}throw Error('Timed out: '+label)}
 async function inspect(frame,page,position,expected){
- frame.src=new URL(page.href+'?video-check=27',root);
+ frame.src=new URL(page.href+'?video-check=28',root);
  await until(()=>{try{return frame.contentDocument?.querySelector('meta[name="page-section-id"]')?.content===String(position)}catch{return false}},'reader page');
  await until(()=>frame.contentDocument.querySelector('[aria-label="Sign language"]'),'sign-language control');
  const control=frame.contentDocument.querySelector('[aria-label="Sign language"]');
- if(control.getAttribute('aria-pressed')!=='true')control.click();
+ if(control.getAttribute('aria-pressed')!=='true' && control.getAttribute('aria-checked')!=='true' && !control.checked)control.click();
  await until(()=>frame.contentDocument.querySelector('video'),'video element');
  const v=frame.contentDocument.querySelector('video');
  await until(()=>v.readyState>=2||v.error,'video data');

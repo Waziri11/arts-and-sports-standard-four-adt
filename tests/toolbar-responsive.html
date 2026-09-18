@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Responsive reader toolbar checks</title>
+<style>
+body{font:16px system-ui;margin:24px;color:#17212b}button{padding:12px 18px}pre{white-space:pre-wrap}iframe{border:1px solid #aaa;display:block;margin-top:16px}#stage{overflow:auto;max-height:420px}#status{font-weight:600}
+</style>
+<h1>Responsive reader toolbar checks</h1>
+<p>Tests the actual cover, chapter and activity pages at phone, landscape, tablet and desktop widths. Checks control bounds, mobile drawers, dismissal and navigation.</p>
+<button id="run">Run responsive checks</button>
+<p id="status" role="status">Ready</p>
+<div id="stage"></div><pre id="results"></pre>
+<script>
+const root=new URL('../',location.href);
+const sizes=[{width:320,height:568},{width:390,height:844},{width:667,height:375},{width:768,height:1024},{width:1280,height:800}];
+const results=[];
+const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+function require(condition,message){if(!condition)throw Error(message)}
+function shown(element){if(!element)return false;const r=element.getBoundingClientRect();const s=element.ownerDocument.defaultView.getComputedStyle(element);return r.width>0&&r.height>0&&s.display!=='none'&&s.visibility!=='hidden'&&element.getAttribute('aria-hidden')!=='true'}
+async function until(predicate,label,timeout=20000){const end=Date.now()+timeout;while(Date.now()<end){if(predicate())return;await delay(60)}throw Error('Timed out: '+label)}
+function dockIn(doc){return [...doc.querySelectorAll('[aria-label="Reader controls"]')].find(d=>shown(d)&&d.querySelector('[aria-label="Main Menu"]'))}
+function openedSheet(doc){return [...doc.querySelectorAll('[role="dialog"][data-slot="sheet-content"][data-open]')].find(shown)}
+function button(doc,label){return [...doc.querySelectorAll('button')].find(b=>shown(b)&&(b.getAttribute('aria-label')===label||b.textContent.trim()===label))}
+function assertBounds(element,win,label){const r=element.getBoundingClientRect();require(r.left>=-1&&r.right<=win.innerWidth+1,label+' extends beyond the screen horizontally');require(r.top>=-1&&r.bottom<=win.innerHeight+1,label+' extends beyond the screen vertically')}
+async function closeSheet(doc,win){const sheet=openedSheet(doc);require(sheet,'Expected an open drawer');const handle=sheet.querySelector('[data-mobile-sheet-drag-handle]');require(handle,'Missing drag/keyboard dismissal handle');handle.dispatchEvent(new win.KeyboardEvent('keydown',{key:'Enter',bubbles:true,cancelable:true}));await until(()=>!openedSheet(doc),'drawer dismissal');require(!doc.body.hasAttribute('inert'),'Page remained inert after closing drawer')}
+async function inspect(frame,page,position,size){
+ frame.style.width=size.width+'px';frame.style.height=size.height+'px';
+ const loaded=new Promise(resolve=>frame.addEventListener('load',resolve,{once:true}));
+ frame.src=new URL(page.href+'?toolbar-check=29',root);
+ await loaded;
+ await until(()=>{try{return frame.contentDocument?.querySelector('meta[name="page-section-id"]')?.content===String(position)&&dockIn(frame.contentDocument)}catch{return false}},'reader toolbar');
+ const doc=frame.contentDocument,win=frame.contentWindow;
+ const dock=dockIn(doc);const buttons=[...dock.querySelectorAll('button')].filter(shown);
+ require(buttons.length===(size.width<768?4:8),'Incorrect number of toolbar controls: '+buttons.length);
+ assertBounds(dock,win,'Toolbar');for(const control of buttons)assertBounds(control,win,control.getAttribute('aria-label'));
+ require(button(doc,'Previous page').disabled===(position===1),'Wrong previous-page availability');
+ require(button(doc,'Next page').disabled===(position===81),'Wrong next-page availability');
+ if(size.width<768){
+  button(doc,'Accessibility menu').click();await until(()=>openedSheet(doc),'mobile tools drawer');await delay(220);
+  let sheet=openedSheet(doc);assertBounds(sheet,win,'Tools drawer');
+  for(const label of ['Glossary','Text to speech','Sign language','Language','Settings'])require(button(doc,label),'Missing tool '+label);
+  button(doc,'Settings').click();await until(()=>openedSheet(doc)?.textContent.includes('Easy read'),'settings drawer');await delay(220);
+  assertBounds(openedSheet(doc),win,'Settings drawer');await closeSheet(doc,win);
+  button(doc,'Main Menu').click();await until(()=>openedSheet(doc)?.textContent.includes('Contents'),'contents drawer');await delay(220);
+  assertBounds(openedSheet(doc),win,'Contents drawer');
+  require(openedSheet(doc).querySelector('input'),'Contents search is missing');
+  await closeSheet(doc,win);
+ }else{
+  require(!button(doc,'Accessibility menu'),'Mobile tools trigger remained visible on desktop');
+  button(doc,'Settings').click();await until(()=>doc.querySelector('[data-slot="popover-content"][data-open]'),'desktop settings popover');
+  require(!openedSheet(doc),'Desktop used a mobile drawer');
+  button(doc,'Settings').click();
+ }
+ return {page:page.href,position,...size,toolbarControls:buttons.length,passed:true};
+}
+document.querySelector('#run').onclick=async()=>{
+ const run=document.querySelector('#run'),status=document.querySelector('#status');run.disabled=true;results.length=0;
+ const pages=await(await fetch(new URL('content/pages.json',root))).json();
+ const sample=[0,7,79,80];
+ const frame=document.createElement('iframe');frame.title='Reader under test';document.querySelector('#stage').replaceChildren(frame);
+ for(const index of sample)for(const size of sizes){
+  let result;try{result=await inspect(frame,pages[index],index+1,size)}catch(error){result={page:pages[index].href,position:index+1,...size,passed:false,error:error.message}}
+  results.push(result);status.textContent=results.length+'/20 checked; '+results.filter(r=>!r.passed).length+' failures';
+  document.querySelector('#results').textContent=JSON.stringify(results,null,2);
+ }
+ frame.remove();status.textContent+=' — COMPLETE';run.disabled=false;
+};
+</script>
+</html>

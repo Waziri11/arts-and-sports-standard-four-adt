@@ -27,7 +27,9 @@ jobs:
           filter: blob:none
           sparse-checkout: |
             /*
-            !/videos/
+            !/videos/*
+            /videos/page_1.mp4
+            /videos/page_81.mp4
           sparse-checkout-cone-mode: false
 
       - name: Check sign-language playback regressions
@@ -38,15 +40,21 @@ jobs:
           python3 scripts/refresh-offline-preloader.py
           git diff --exit-code -- assets/offline-preloader.js
 
+      - name: Check responsive toolbar installation
+        run: python3 scripts/verify-reader-toolbar.py
+
+      - name: Validate and stage the published reader
+        run: python3 scripts/prepare-pages.py _site
+
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
 
-      - name: Package the ADT site
+      - name: Upload the published reader
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Publish the book
         id: deployment
